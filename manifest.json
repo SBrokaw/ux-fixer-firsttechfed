@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "FirstTechFed UX Fixer",
+  "version": "1.0.0",
+  "description": "Transform FirstTechFed's interface into a dense, efficient, text-based design",
+  "author": "Your Name",
+  "homepage_url": "https://github.com/sbrokaw/ux-fixer-firsttechfed",
+  
+  "permissions": [
+    "activeTab"
+  ],
+  
+  "host_permissions": [
+    "https://*.firsttechfed.com/*",
+    "https://*.banking.firsttechfed.com/*"
+  ],
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.firsttechfed.com/*",
+        "https://*.banking.firsttechfed.com/*"
+      ],
+      "css": [
+        "styles/main.css",
+        "styles/forms.css",
+        "styles/navigation.css",
+        "styles/typography.css",
+        "styles/components.css"
+      ],
+      "js": [
+        "content-scripts/main.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["styles/*"],
+      "matches": [
+        "https://*.firsttechfed.com/*",
+        "https://*.banking.firsttechfed.com/*"
+      ]
+    }
+  ]
+} 

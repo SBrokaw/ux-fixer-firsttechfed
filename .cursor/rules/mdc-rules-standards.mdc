@@ -1,0 +1,116 @@
+---
+description: Cursor Rules Location
+globs: *.mdc
+alwaysApply: false
+---
+## Description
+
+This rule ensures all MDC rules are properly structured, located in the correct directory, and prevents redundancy by consolidating related rules.
+
+## Rule
+
+### File Location and Structure
+1. All MDC rules MUST be placed in the `.cursor/rules/` directory
+2. All MDC rules MUST have the `.mdc` file extension
+3. All MDC rules MUST follow the standard MDC format with proper YAML frontmatter
+4. All MDC rules MUST include required fields (description, globs, ruleType)
+
+### Required YAML Frontmatter
+Every MDC rule MUST include these required fields:
+
+```yaml
+---
+description: [Clear description of what the rule does]
+globs: [Array of file patterns this rule applies to]
+ruleType: [Always | Auto Attached | Agent Requested | Manual]
+---
+```
+
+### RuleType Definitions
+- **Always**: Rule is always included in model context
+- **Auto Attached**: Rule is included when files matching glob patterns are referenced
+- **Agent Requested**: Rule is available to AI, which decides whether to include it (must provide description)
+- **Manual**: Only included when explicitly mentioned using @ruleName
+
+### Rule Naming Convention
+- Use descriptive names that clearly indicate the rule's purpose
+- Use lowercase with hyphens for multi-word names
+- Prefix with project name if rule is project-specific
+- Avoid generic names that could overlap with other rules
+
+### Redundancy Prevention
+Before creating a new MDC rule, check for existing rules that could be combined:
+
+1. **Check for Similar Functionality**: Look for existing rules that cover similar topics
+2. **Check for Overlapping Globs**: Avoid rules that target the same file patterns
+3. **Consolidate Related Rules**: Combine rules that serve similar purposes
+4. **Prefer Fewer, Comprehensive Rules**: Create 2-3 comprehensive rules rather than many small ones
+
+### Redundancy Check List
+- [ ] No existing rule covers similar functionality
+- [ ] No existing rule has overlapping glob patterns
+- [ ] New rule cannot be combined with existing rules
+- [ ] Rule serves a distinct, non-overlapping purpose
+
+## Examples
+
+✅ Correct MDC Rule:
+```yaml
+---
+description: Task Planning and Progress Tracking with Scratchpad
+globs:
+  - "tasks/ai/*.md"
+  - ".scratch"
+ruleType: Always
+---
+```
+
+❌ Incorrect MDC Rule (missing ruleType):
+```yaml
+---
+description: Some rule description
+globs:
+  - "*.md"
+---
+```
+
+❌ Redundant Rules (should be combined):
+```yaml
+# Rule 1
+---
+description: Data organization standards
+globs: ["data/**/*"]
+ruleType: Auto Attached
+---
+
+# Rule 2 (redundant)
+---
+description: Data file formatting
+globs: ["data/**/*"]
+ruleType: Auto Attached
+---
+```
+
+## Validation Checklist
+- [ ] File is in `.cursor/rules/` directory
+- [ ] File has `.mdc` extension
+- [ ] YAML frontmatter is present
+- [ ] `description` field is included
+- [ ] `globs` field is included
+- [ ] `ruleType` field is included
+- [ ] RuleType value is one of the four valid options
+- [ ] File name follows naming convention
+- [ ] No redundancy with existing rules
+- [ ] Rule cannot be combined with existing rules
+
+## Directory Structure
+```
+PROJECT_ROOT/
+├── .cursor/
+│   └── rules/
+│       ├── mdc-rules-standards.mdc      # This rule
+│       ├── task-planning.mdc            # Task management
+│       ├── data-organization.mdc        # Data and documentation
+│       └── auto-draft-update.mdc        # Draft updates
+└── ...
+```

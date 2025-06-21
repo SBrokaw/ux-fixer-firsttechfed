@@ -1,0 +1,5 @@
+!(function(){let h='https://assets.orb.alkamitech.com/production',nm='resolvedRsCdn',t={'bank-instance-identifier':'fff89afc-923d-4253-828d-581a82074804','user-identifier':'67360bfe-f8aa-48da-b5bf-a29c2d058c77',env:'prod'},r=(r)=>{let n=document.createElement('script');for(let s in((n.src=`${h}${r.value.basePath}/${r.value.files[0]}`),(n.type='application/javascript'),t))
+if(t.hasOwnProperty(s)){let a=t[s];n.setAttribute(s,a);}
+localStorage.setItem(nm,JSON.stringify(r)),document.head.appendChild(n);};if(localStorage.getItem(nm)){if(JSON.parse(localStorage.getItem(nm)).expires<Date.now()){localStorage.removeItem(nm);}
+else{r(JSON.parse(localStorage.getItem(nm)));return;}}
+fetch(`${h}/cdn-package-labels/alkami.cdn.fragment.rudderstack/1.json`).then((rs)=>{if(!rs.ok)throw Error(`Unable to resolve CDN fragment. Status: ${rs.status}`);return rs.json();}).then((d)=>{c={expires:Date.now()+(1000*60*60*24),value:d};r(c);}).catch((ex)=>{console.error('Unable to register this fragment:',ex);});})();

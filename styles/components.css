@@ -1,0 +1,353 @@
+/* FirstTechFed UX Fixer - Component Styles */
+
+/* Buttons */
+.ux-fixer-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: var(--ux-fixer-spacing-2) !important;
+  padding: var(--ux-fixer-spacing-2) var(--ux-fixer-spacing-4) !important;
+  border: var(--ux-fixer-border-width) solid transparent !important;
+  border-radius: var(--ux-fixer-border-radius) !important;
+  font-size: var(--ux-fixer-font-size-sm) !important;
+  font-weight: 500 !important;
+  line-height: var(--ux-fixer-line-height-normal) !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all var(--ux-fixer-transition-fast) !important;
+  background-color: var(--ux-fixer-gray-100) !important;
+  color: var(--ux-fixer-gray-700) !important;
+}
+
+.ux-fixer-btn:hover {
+  background-color: var(--ux-fixer-gray-200) !important;
+  color: var(--ux-fixer-gray-900) !important;
+}
+
+.ux-fixer-btn:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1) !important;
+}
+
+.ux-fixer-btn-primary {
+  background-color: var(--ux-fixer-primary) !important;
+  color: var(--ux-fixer-white) !important;
+}
+
+.ux-fixer-btn-primary:hover {
+  background-color: var(--ux-fixer-primary-dark) !important;
+}
+
+.ux-fixer-btn-success {
+  background-color: var(--ux-fixer-success) !important;
+  color: var(--ux-fixer-white) !important;
+}
+
+.ux-fixer-btn-danger {
+  background-color: var(--ux-fixer-danger) !important;
+  color: var(--ux-fixer-white) !important;
+}
+
+.ux-fixer-btn-small {
+  padding: var(--ux-fixer-spacing-1) var(--ux-fixer-spacing-3) !important;
+  font-size: var(--ux-fixer-font-size-xs) !important;
+}
+
+.ux-fixer-btn-large {
+  padding: var(--ux-fixer-spacing-3) var(--ux-fixer-spacing-6) !important;
+  font-size: var(--ux-fixer-font-size-base) !important;
+}
+
+/* Cards */
+.ux-fixer-card {
+  background-color: var(--ux-fixer-white) !important;
+  border: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-200) !important;
+  border-radius: var(--ux-fixer-border-radius) !important;
+  box-shadow: var(--ux-fixer-shadow) !important;
+  overflow: hidden !important;
+}
+
+.ux-fixer-card-header {
+  padding: var(--ux-fixer-spacing-4) !important;
+  border-bottom: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-200) !important;
+  background-color: var(--ux-fixer-gray-50) !important;
+}
+
+.ux-fixer-card-body {
+  padding: var(--ux-fixer-spacing-4) !important;
+}
+
+.ux-fixer-card-footer {
+  padding: var(--ux-fixer-spacing-4) !important;
+  border-top: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-200) !important;
+  background-color: var(--ux-fixer-gray-50) !important;
+}
+
+/* Tables */
+.ux-fixer-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  font-size: var(--ux-fixer-font-size-sm) !important;
+  font-family: var(--ux-fixer-font-family-mono) !important;
+}
+
+.ux-fixer-table th,
+.ux-fixer-table td {
+  padding: var(--ux-fixer-spacing-2) var(--ux-fixer-spacing-3) !important;
+  text-align: left !important;
+  border-bottom: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-200) !important;
+}
+
+.ux-fixer-table th {
+  background-color: var(--ux-fixer-gray-50) !important;
+  font-weight: 600 !important;
+  color: var(--ux-fixer-gray-700) !important;
+  font-family: var(--ux-fixer-font-family) !important;
+}
+
+.ux-fixer-table tr:hover {
+  background-color: var(--ux-fixer-gray-50) !important;
+}
+
+/* Alerts */
+.ux-fixer-alert {
+  padding: var(--ux-fixer-spacing-3) var(--ux-fixer-spacing-4) !important;
+  border: var(--ux-fixer-border-width) solid transparent !important;
+  border-radius: var(--ux-fixer-border-radius) !important;
+  margin-bottom: var(--ux-fixer-spacing-4) !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: var(--ux-fixer-spacing-3) !important;
+}
+
+.ux-fixer-alert-info {
+  background-color: rgba(23, 162, 184, 0.1) !important;
+  border-color: var(--ux-fixer-info) !important;
+  color: var(--ux-fixer-info) !important;
+}
+
+.ux-fixer-alert-success {
+  background-color: rgba(40, 167, 69, 0.1) !important;
+  border-color: var(--ux-fixer-success) !important;
+  color: var(--ux-fixer-success) !important;
+}
+
+.ux-fixer-alert-warning {
+  background-color: rgba(255, 193, 7, 0.1) !important;
+  border-color: var(--ux-fixer-warning) !important;
+  color: var(--ux-fixer-warning) !important;
+}
+
+.ux-fixer-alert-danger {
+  background-color: rgba(220, 53, 69, 0.1) !important;
+  border-color: var(--ux-fixer-danger) !important;
+  color: var(--ux-fixer-danger) !important;
+}
+
+/* FirstTechFed Specific Component Overrides */
+
+/* Button overrides */
+.btn, .button, .btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-warning, .btn-info {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: var(--ux-fixer-spacing-2) !important;
+  padding: var(--ux-fixer-spacing-2) var(--ux-fixer-spacing-4) !important;
+  border: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-300) !important;
+  border-radius: var(--ux-fixer-border-radius) !important;
+  font-size: var(--ux-fixer-font-size-sm) !important;
+  font-weight: 500 !important;
+  line-height: var(--ux-fixer-line-height-normal) !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all var(--ux-fixer-transition-fast) !important;
+  background-color: var(--ux-fixer-white) !important;
+  color: var(--ux-fixer-gray-700) !important;
+  box-shadow: none !important;
+}
+
+.btn:hover, .button:hover {
+  background-color: var(--ux-fixer-gray-100) !important;
+  border-color: var(--ux-fixer-gray-400) !important;
+  color: var(--ux-fixer-gray-900) !important;
+  text-decoration: none !important;
+}
+
+.btn-primary {
+  background-color: var(--ux-fixer-primary) !important;
+  color: var(--ux-fixer-white) !important;
+  border-color: var(--ux-fixer-primary) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--ux-fixer-primary-dark) !important;
+  border-color: var(--ux-fixer-primary-dark) !important;
+}
+
+.btn-success {
+  background-color: var(--ux-fixer-success) !important;
+  color: var(--ux-fixer-white) !important;
+  border-color: var(--ux-fixer-success) !important;
+}
+
+.btn-danger {
+  background-color: var(--ux-fixer-danger) !important;
+  color: var(--ux-fixer-white) !important;
+  border-color: var(--ux-fixer-danger) !important;
+}
+
+/* Card overrides */
+.card, .panel, .well, .jumbotron {
+  background-color: var(--ux-fixer-white) !important;
+  border: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-200) !important;
+  border-radius: var(--ux-fixer-border-radius) !important;
+  box-shadow: var(--ux-fixer-shadow-sm) !important;
+  overflow: hidden !important;
+  padding: var(--ux-fixer-spacing-3) !important;
+  margin-bottom: var(--ux-fixer-spacing-3) !important;
+}
+
+.card-header, .panel-heading, .well-header {
+  padding: var(--ux-fixer-spacing-3) !important;
+  border-bottom: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-200) !important;
+  background-color: var(--ux-fixer-gray-50) !important;
+  margin: calc(-1 * var(--ux-fixer-spacing-3)) calc(-1 * var(--ux-fixer-spacing-3)) var(--ux-fixer-spacing-3) calc(-1 * var(--ux-fixer-spacing-3)) !important;
+}
+
+.card-body, .panel-body, .well-body {
+  padding: var(--ux-fixer-spacing-3) !important;
+}
+
+.card-footer, .panel-footer, .well-footer {
+  padding: var(--ux-fixer-spacing-3) !important;
+  border-top: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-200) !important;
+  background-color: var(--ux-fixer-gray-50) !important;
+  margin: var(--ux-fixer-spacing-3) calc(-1 * var(--ux-fixer-spacing-3)) calc(-1 * var(--ux-fixer-spacing-3)) calc(-1 * var(--ux-fixer-spacing-3)) !important;
+}
+
+/* Table overrides */
+table, .table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  font-size: var(--ux-fixer-font-size-sm) !important;
+  font-family: var(--ux-fixer-font-family-mono) !important;
+}
+
+table th, table td, .table th, .table td {
+  padding: var(--ux-fixer-spacing-2) var(--ux-fixer-spacing-3) !important;
+  text-align: left !important;
+  border-bottom: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-200) !important;
+  vertical-align: top !important;
+}
+
+table th, .table th {
+  background-color: var(--ux-fixer-gray-50) !important;
+  font-weight: 600 !important;
+  color: var(--ux-fixer-gray-700) !important;
+  font-family: var(--ux-fixer-font-family) !important;
+}
+
+table tr:hover, .table tr:hover {
+  background-color: var(--ux-fixer-gray-50) !important;
+}
+
+/* Alert overrides */
+.alert, .alert-info, .alert-success, .alert-warning, .alert-danger {
+  padding: var(--ux-fixer-spacing-3) var(--ux-fixer-spacing-4) !important;
+  border: var(--ux-fixer-border-width) solid transparent !important;
+  border-radius: var(--ux-fixer-border-radius) !important;
+  margin-bottom: var(--ux-fixer-spacing-4) !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: var(--ux-fixer-spacing-3) !important;
+  box-shadow: none !important;
+}
+
+.alert-info {
+  background-color: rgba(23, 162, 184, 0.1) !important;
+  border-color: var(--ux-fixer-info) !important;
+  color: var(--ux-fixer-info) !important;
+}
+
+.alert-success {
+  background-color: rgba(40, 167, 69, 0.1) !important;
+  border-color: var(--ux-fixer-success) !important;
+  color: var(--ux-fixer-success) !important;
+}
+
+.alert-warning {
+  background-color: rgba(255, 193, 7, 0.1) !important;
+  border-color: var(--ux-fixer-warning) !important;
+  color: var(--ux-fixer-warning) !important;
+}
+
+.alert-danger {
+  background-color: rgba(220, 53, 69, 0.1) !important;
+  border-color: var(--ux-fixer-danger) !important;
+  color: var(--ux-fixer-danger) !important;
+}
+
+/* Remove excessive styling */
+.alert-dismissible .close {
+  display: none !important;
+}
+
+/* Badge overrides */
+.badge, .label {
+  display: inline-block !important;
+  padding: var(--ux-fixer-spacing-1) var(--ux-fixer-spacing-2) !important;
+  font-size: var(--ux-fixer-font-size-xs) !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  vertical-align: baseline !important;
+  border-radius: var(--ux-fixer-border-radius) !important;
+  background-color: var(--ux-fixer-gray-500) !important;
+  color: var(--ux-fixer-white) !important;
+}
+
+.badge-primary, .label-primary {
+  background-color: var(--ux-fixer-primary) !important;
+}
+
+.badge-success, .label-success {
+  background-color: var(--ux-fixer-success) !important;
+}
+
+.badge-warning, .label-warning {
+  background-color: var(--ux-fixer-warning) !important;
+  color: var(--ux-fixer-gray-900) !important;
+}
+
+.badge-danger, .label-danger {
+  background-color: var(--ux-fixer-danger) !important;
+}
+
+/* Progress bar overrides */
+.progress {
+  height: var(--ux-fixer-spacing-3) !important;
+  background-color: var(--ux-fixer-gray-200) !important;
+  border-radius: var(--ux-fixer-border-radius) !important;
+  overflow: hidden !important;
+  margin-bottom: var(--ux-fixer-spacing-3) !important;
+}
+
+.progress-bar {
+  height: 100% !important;
+  background-color: var(--ux-fixer-primary) !important;
+  border-radius: var(--ux-fixer-border-radius) !important;
+  transition: width var(--ux-fixer-transition-normal) !important;
+}
+
+.progress-bar-success {
+  background-color: var(--ux-fixer-success) !important;
+}
+
+.progress-bar-warning {
+  background-color: var(--ux-fixer-warning) !important;
+}
+
+.progress-bar-danger {
+  background-color: var(--ux-fixer-danger) !important;
+} 

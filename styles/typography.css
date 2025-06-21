@@ -1,0 +1,107 @@
+/* FirstTechFed UX Fixer - Typography Styles */
+
+/* Typography System */
+.ux-fixer-text-xs { font-size: var(--ux-fixer-font-size-xs) !important; }
+.ux-fixer-text-sm { font-size: var(--ux-fixer-font-size-sm) !important; }
+.ux-fixer-text-base { font-size: var(--ux-fixer-font-size-base) !important; }
+.ux-fixer-text-lg { font-size: var(--ux-fixer-font-size-lg) !important; }
+.ux-fixer-text-xl { font-size: var(--ux-fixer-font-size-xl) !important; }
+
+.ux-fixer-font-mono { font-family: var(--ux-fixer-font-family-mono) !important; }
+.ux-fixer-font-sans { font-family: var(--ux-fixer-font-family) !important; }
+
+.ux-fixer-leading-tight { line-height: var(--ux-fixer-line-height-tight) !important; }
+.ux-fixer-leading-normal { line-height: var(--ux-fixer-line-height-normal) !important; }
+.ux-fixer-leading-relaxed { line-height: var(--ux-fixer-line-height-relaxed) !important; }
+
+.ux-fixer-font-normal { font-weight: 400 !important; }
+.ux-fixer-font-medium { font-weight: 500 !important; }
+.ux-fixer-font-semibold { font-weight: 600 !important; }
+.ux-fixer-font-bold { font-weight: 700 !important; }
+
+/* Text Colors */
+.ux-fixer-text-primary { color: var(--ux-fixer-gray-900) !important; }
+.ux-fixer-text-secondary { color: var(--ux-fixer-gray-600) !important; }
+.ux-fixer-text-muted { color: var(--ux-fixer-gray-500) !important; }
+.ux-fixer-text-success { color: var(--ux-fixer-success) !important; }
+.ux-fixer-text-warning { color: var(--ux-fixer-warning) !important; }
+.ux-fixer-text-danger { color: var(--ux-fixer-danger) !important; }
+.ux-fixer-text-info { color: var(--ux-fixer-info) !important; }
+
+/* Headings */
+.ux-fixer-heading-1 {
+  font-size: var(--ux-fixer-font-size-xl) !important;
+  font-weight: 600 !important;
+  line-height: var(--ux-fixer-line-height-tight) !important;
+  margin: 0 0 var(--ux-fixer-spacing-4) 0 !important;
+}
+
+.ux-fixer-heading-2 {
+  font-size: var(--ux-fixer-font-size-lg) !important;
+  font-weight: 600 !important;
+  line-height: var(--ux-fixer-line-height-tight) !important;
+  margin: 0 0 var(--ux-fixer-spacing-3) 0 !important;
+}
+
+.ux-fixer-heading-3 {
+  font-size: var(--ux-fixer-font-size-base) !important;
+  font-weight: 600 !important;
+  line-height: var(--ux-fixer-line-height-tight) !important;
+  margin: 0 0 var(--ux-fixer-spacing-2) 0 !important;
+}
+
+.ux-fixer-heading-4 {
+  font-size: var(--ux-fixer-font-size-sm) !important;
+  font-weight: 600 !important;
+  line-height: var(--ux-fixer-line-height-tight) !important;
+  margin: 0 0 var(--ux-fixer-spacing-2) 0 !important;
+}
+
+/* FirstTechFed Specific Typography Overrides */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ux-fixer-font-family) !important;
+  font-weight: 600 !important;
+  line-height: var(--ux-fixer-line-height-tight) !important;
+  margin-bottom: var(--ux-fixer-spacing-3) !important;
+}
+
+h1 { font-size: var(--ux-fixer-font-size-xl) !important; }
+h2 { font-size: var(--ux-fixer-font-size-lg) !important; }
+h3 { font-size: var(--ux-fixer-font-size-base) !important; }
+h4 { font-size: var(--ux-fixer-font-size-sm) !important; }
+h5 { font-size: var(--ux-fixer-font-size-sm) !important; }
+h6 { font-size: var(--ux-fixer-font-size-sm) !important; }
+
+/* Paragraph and text elements */
+p, span, div, a {
+  font-family: var(--ux-fixer-font-family) !important;
+  font-size: var(--ux-fixer-font-size-sm) !important;
+  line-height: var(--ux-fixer-line-height-normal) !important;
+}
+
+/* Monospace for data and numbers */
+.account-number, .routing-number, .amount, .balance, .date {
+  font-family: var(--ux-fixer-font-family-mono) !important;
+  font-size: var(--ux-fixer-font-size-sm) !important;
+}
+
+/* Dense text spacing */
+p, div, span {
+  margin-bottom: var(--ux-fixer-spacing-2) !important;
+}
+
+/* Remove excessive line spacing */
+* {
+  line-height: var(--ux-fixer-line-height-normal) !important;
+}
+
+/* Compact list styling */
+ul, ol {
+  margin: var(--ux-fixer-spacing-2) 0 !important;
+  padding-left: var(--ux-fixer-spacing-4) !important;
+}
+
+li {
+  margin-bottom: var(--ux-fixer-spacing-1) !important;
+  font-size: var(--ux-fixer-font-size-sm) !important;
+} 

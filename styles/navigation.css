@@ -1,0 +1,209 @@
+/* FirstTechFed UX Fixer - Navigation Styles */
+
+/* Main Navigation */
+.ux-fixer-nav {
+  background-color: var(--ux-fixer-gray-100) !important;
+  border-bottom: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-200) !important;
+  padding: var(--ux-fixer-spacing-3) var(--ux-fixer-spacing-5) !important;
+}
+
+.ux-fixer-nav-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+.ux-fixer-nav-brand {
+  font-size: var(--ux-fixer-font-size-lg) !important;
+  font-weight: 600 !important;
+  color: var(--ux-fixer-gray-900) !important;
+  text-decoration: none !important;
+}
+
+.ux-fixer-nav-menu {
+  display: flex !important;
+  align-items: center !important;
+  gap: var(--ux-fixer-spacing-4) !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.ux-fixer-nav-item {
+  position: relative !important;
+}
+
+.ux-fixer-nav-link {
+  display: block !important;
+  padding: var(--ux-fixer-spacing-2) var(--ux-fixer-spacing-3) !important;
+  color: var(--ux-fixer-gray-600) !important;
+  text-decoration: none !important;
+  font-size: var(--ux-fixer-font-size-sm) !important;
+  border-radius: var(--ux-fixer-border-radius) !important;
+  transition: all var(--ux-fixer-transition-fast) !important;
+}
+
+.ux-fixer-nav-link:hover {
+  color: var(--ux-fixer-gray-900) !important;
+  background-color: var(--ux-fixer-gray-200) !important;
+}
+
+.ux-fixer-nav-link.active {
+  color: var(--ux-fixer-primary) !important;
+  background-color: rgba(0, 123, 255, 0.1) !important;
+  font-weight: 500 !important;
+}
+
+/* Breadcrumbs */
+.ux-fixer-breadcrumb {
+  display: flex !important;
+  align-items: center !important;
+  gap: var(--ux-fixer-spacing-2) !important;
+  padding: var(--ux-fixer-spacing-3) var(--ux-fixer-spacing-5) !important;
+  background-color: var(--ux-fixer-white) !important;
+  border-bottom: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-200) !important;
+  font-size: var(--ux-fixer-font-size-xs) !important;
+}
+
+.ux-fixer-breadcrumb-item {
+  color: var(--ux-fixer-gray-500) !important;
+  text-decoration: none !important;
+}
+
+.ux-fixer-breadcrumb-item:hover {
+  color: var(--ux-fixer-gray-700) !important;
+  text-decoration: underline !important;
+}
+
+.ux-fixer-breadcrumb-item.active {
+  color: var(--ux-fixer-gray-900) !important;
+  font-weight: 500 !important;
+}
+
+.ux-fixer-breadcrumb-separator {
+  color: var(--ux-fixer-gray-400) !important;
+  margin: 0 var(--ux-fixer-spacing-1) !important;
+}
+
+/* FirstTechFed Specific Navigation Overrides */
+.navbar, .nav, .navigation, header {
+  background-color: var(--ux-fixer-gray-100) !important;
+  border-bottom: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-200) !important;
+  padding: var(--ux-fixer-spacing-3) !important;
+}
+
+/* Force all navigation to be horizontal */
+.navbar-nav, .nav-menu, .menu-items, .nav-items {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: var(--ux-fixer-spacing-3) !important;
+  align-items: center !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.navbar-nav li, .nav-menu li, .menu-items li, .nav-items li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.navbar-nav a, .nav-menu a, .menu-items a, .nav-items a {
+  display: block !important;
+  padding: var(--ux-fixer-spacing-2) var(--ux-fixer-spacing-3) !important;
+  color: var(--ux-fixer-gray-600) !important;
+  text-decoration: none !important;
+  font-size: var(--ux-fixer-font-size-sm) !important;
+  border-radius: var(--ux-fixer-border-radius) !important;
+  transition: all var(--ux-fixer-transition-fast) !important;
+}
+
+.navbar-nav a:hover, .nav-menu a:hover, .menu-items a:hover, .nav-items a:hover {
+  color: var(--ux-fixer-gray-900) !important;
+  background-color: var(--ux-fixer-gray-200) !important;
+}
+
+/* Remove dropdown functionality */
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-menu, .dropdown-content, .submenu {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: var(--ux-fixer-spacing-2) !important;
+  position: static !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.dropdown-menu li, .dropdown-content li, .submenu li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.dropdown-menu a, .dropdown-content a, .submenu a {
+  display: block !important;
+  padding: var(--ux-fixer-spacing-1) var(--ux-fixer-spacing-2) !important;
+  color: var(--ux-fixer-gray-600) !important;
+  text-decoration: none !important;
+  font-size: var(--ux-fixer-font-size-sm) !important;
+  border-radius: var(--ux-fixer-border-radius) !important;
+}
+
+.dropdown-menu a:hover, .dropdown-content a:hover, .submenu a:hover {
+  color: var(--ux-fixer-gray-900) !important;
+  background-color: var(--ux-fixer-gray-200) !important;
+}
+
+/* Hide mobile menu toggles */
+.navbar-toggler, .hamburger, .menu-toggle, .mobile-menu-toggle {
+  display: none !important;
+}
+
+/* Force mobile menus to be visible */
+.navbar-collapse, .mobile-menu, .collapse {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: var(--ux-fixer-spacing-3) !important;
+  align-items: center !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .ux-fixer-nav-container {
+    flex-direction: column !important;
+    gap: var(--ux-fixer-spacing-3) !important;
+  }
+  
+  .ux-fixer-nav-menu {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: var(--ux-fixer-spacing-1) !important;
+  }
+  
+  .ux-fixer-nav-link {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  /* Force mobile navigation to be horizontal */
+  .navbar-collapse, .mobile-menu, .collapse {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: var(--ux-fixer-spacing-2) !important;
+  }
+} 

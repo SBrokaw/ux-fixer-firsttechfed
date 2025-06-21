@@ -1,0 +1,8 @@
+/*!
+ * @alkami/iris-vue v1.44.1
+ * Vue components for the Iris Design System
+ *
+ * Copyright (c) 2025 Alkami Technology
+ * Licensed under the BSD-3-Clause license. (https://iris.alkamitech.com/cdn/iris-vue/latest/LICENSE)
+ */
+label[class*=irisv-]{float:none;margin:0;padding:0;width:auto}input[class*=irisv-][type=radio],input[class*=irisv-][type=checkbox]{background-color:unset;line-height:normal;margin:0}input.irisv-textfield__input[type=text],input.irisv-textfield__input[type=password],input.irisv-textfield__input[type=search],input.irisv-textfield__input[type=date]{background:unset;border:none;border-radius:0;box-shadow:none;float:none;margin:0;outline:none;padding:0;width:100%}input.irisv-textfield__input[type=text]:focus,input.irisv-textfield__input[type=password]:focus,input.irisv-textfield__input[type=search]:focus,input.irisv-textfield__input[type=date]:focus{background-color:rgba(0,0,0,0);box-shadow:none !important}.iris-keyboard-use-detected [class*=irisv-]:focus{box-shadow:0}form label.irisv-selectable-tile{display:inline-block}.irisv-avatar span.irisv-avatar__content__main-icon{display:flex !important}.irisv-avatar span.irisv-avatar__sub-icon{display:flex !important}#meta_header>.flash-banner.flash-banner--show.iris-notification{z-index:11000 !important}

@@ -1,0 +1,230 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+## Description
+
+This rule ensures effective task planning and progress tracking using the `tasks/ai/scratchpad.md` file as a scratchpad. The scratchpad serves as a central place for AI task organization, planning, and reflection. It also defines the structure and content requirements for human-in-the-loop tasks.
+
+## Rule
+
+When managing AI tasks:
+
+1. All new AI tasks MUST start with a review and update of the `tasks/ai/scratchpad.md` file
+2. The scratchpad MUST be cleared of old task content before starting a new task
+3. Each task MUST include:
+   - Task description and requirements
+   - Step-by-step plan with todo markers
+   - Progress updates as steps are completed
+   - Reflection points at key milestones
+4. Todo markers MUST use the format `[ ]` for incomplete and `[X]` for complete items
+5. The scratchpad MUST be referenced before starting any new subtask
+6. All AI task files MUST be stored in the `tasks/ai/` directory
+
+## AI Scratchpad Format
+
+```markdown
+# Current Task: [Task Name]
+
+## Description
+[Detailed task description and requirements]
+
+## Plan
+[ ] Step 1: Initial setup
+[ ] Step 2: Core implementation
+[ ] Step 3: Testing
+
+## Progress
+[X] Step 1 completed: Initial setup done
+[ ] Step 2 in progress: Core implementation
+
+## Reflections
+### Milestone 1
+- Accomplished: [List of achievements]
+- Challenges: [List of issues encountered]
+- Improvements: [List of potential improvements]
+- Next Steps: [List of next actions]
+```
+
+## Human Task Structure
+
+The `/tasks/human/` directory MUST be organized into three priority-based categories:
+
+### 1. Validation Tasks (`validation/`)
+- **Purpose**: Verify core demo assumptions and technical requirements
+- **Priority**: HIGH - These tasks block further development
+- **Requirements**: Real equipment, measurements, and data collection
+- **Naming**: `01-task-name.md`, `02-task-name.md`, etc.
+- **Status Tracking**: Must include Not Started/In Progress/Complete/Blocked
+
+### 2. Clarity Tasks (`clarity/`)
+- **Purpose**: Support talking points with quantitative data and analysis
+- **Priority**: MEDIUM - Enhance demo effectiveness and communication
+- **Requirements**: Data analysis, frequency response measurements, noise quantification
+- **Naming**: `01-task-name.md`, `02-task-name.md`, etc.
+
+### 3. Visual Tasks (`visual/`)
+- **Purpose**: Create diagrams, photos, and visual aids for communication
+- **Priority**: MEDIUM - Improve presentation and documentation
+- **Requirements**: Schematics, setup photography, frequency plots, visual documentation
+- **Naming**: `01-task-name.md`, `02-task-name.md`, etc.
+
+## Human Task File Format
+
+All human task files MUST follow the template structure:
+
+```markdown
+# Task: [Task Name]
+Priority: [High/Medium/Low]
+Estimated Time: [X hours]
+Dependencies: [List of requirements]
+Status: [Not Started/In Progress/Complete/Blocked]
+
+## Objective
+[Clear description of the task goal and why it's important]
+
+## Steps
+1. [ ] Step one
+2. [ ] Step two
+3. [ ] Step three
+
+## Data Collection
+- Location: [Where to store data]
+- Format: [Expected data format]
+- Validation: [How to verify success]
+
+## Success Criteria
+- [ ] Criterion 1
+- [ ] Criterion 2
+- [ ] Criterion 3
+
+## Notes
+[Any additional information, warnings, or special considerations]
+
+## Progress Updates
+### [Date] - [Duration]
+- [ ] Step completed
+- [ ] Data collected
+- [ ] Issues encountered
+- [ ] Next steps
+```
+
+## Directory Structure Requirements
+
+```
+tasks/
+├── ai/
+│   └── scratchpad.md          # AI task planning and progress
+├── human/
+│   ├── README.md              # Human task overview and priorities
+│   ├── validation/            # High priority - core assumptions
+│   ├── clarity/               # Medium priority - quantitative support
+│   └── visual/                # Medium priority - visual aids
+├── templates/
+│   ├── task-template.md       # Standard task format
+│   └── data-collection-template.md
+└── timeline-management.md     # Project timeline and deadlines
+```
+
+## Human Task README Requirements
+
+The `tasks/human/README.md` MUST include:
+
+1. **Current Priorities Section** with:
+   - High priority tasks listed first
+   - Status, time estimates, and dependencies
+   - Clear priority indicators (🔴 HIGH, 🟡 MEDIUM, 🟢 LOW)
+
+2. **Task Categories Section** explaining:
+   - Purpose of each category (validation/clarity/visual)
+   - Priority levels and dependencies
+   - Typical requirements and outputs
+
+3. **Getting Started Section** with:
+   - How to check priorities
+   - How to use templates
+   - Where to store data
+   - How to update status
+
+4. **Status Legend** defining:
+   - Not Started, In Progress, Complete, Blocked
+   - Clear criteria for each status
+
+## Examples
+
+✅ Correct AI Scratchpad:
+```markdown
+# Current Task: Ground Loop Demo Documentation
+
+## Description
+Create comprehensive documentation and data collection framework for the Ground Loop Demo.
+
+## Plan
+[ ] Create initial specs structure
+[ ] Define style guide
+[ ] Set up task tracking system
+
+## Progress
+[X] Create initial specs structure
+[X] Define style guide
+
+## Reflections
+### Milestone: Initial Setup
+- Accomplished: Basic documentation structure created
+- Challenges: Initially placed task tracking in wrong location
+- Improvements: Need proper task tracking system
+- Next Steps: Create tasks/ directory structure
+```
+
+✅ Correct Human Task:
+```markdown
+# Task: Demo Board Baseline Validation
+Priority: High
+Estimated Time: 2-3 hours
+Dependencies: Demo board, oscilloscope, cables, signal generator
+Status: Not Started
+
+## Objective
+Validate that the demo board produces expected noise levels to establish baseline measurements.
+
+## Steps
+1. [ ] Set up demo board with oscilloscope
+2. [ ] Measure baseline noise without TICP
+3. [ ] Document noise characteristics
+
+## Data Collection
+- Location: data/validation/
+- Format: Screenshots, measurements, notes
+- Validation: Noise levels match expected specifications
+
+## Success Criteria
+- [ ] Baseline noise measured and documented
+- [ ] Measurements repeatable and consistent
+- [ ] Data stored in proper format
+
+## Notes
+Critical for establishing demo effectiveness baseline.
+
+## Progress Updates
+### [Date] - [Duration]
+- [ ] Step completed
+- [ ] Data collected
+- [ ] Issues encountered
+- [ ] Next steps
+```
+
+❌ Incorrect:
+```markdown
+# TODO List
+- Do something
+- Do another thing
+- Done with this
+```
+
+## File Organization
+
+- AI task files: `tasks/ai/`
+- Human task files: `tasks/human/`
+- Templates: `tasks/templates/`
+- Scratchpad: `tasks/ai/scratchpad.md`

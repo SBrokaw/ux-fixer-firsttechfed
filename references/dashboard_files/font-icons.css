@@ -1,0 +1,2302 @@
+/* Font-face assignment */
+@font-face {
+	font-family: 'Alkami';
+	src: url('Alkami.woff2') format('woff2'),
+		 url('Alkami.woff') format('woff');
+}
+
+/* Font icon selector classes */
+[class*="font-icon-"] {
+	line-height: 1;
+}
+
+[class*="font-icon-"][class*="font-icon-"]::before,
+[class*="font-icon-"][class*="font-icon-"]::after {
+	display: inline-block;
+	font-family: 'Alkami' !important;
+	font-size: 1.6rem;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	speak: none;
+	text-transform: none;
+	vertical-align: middle;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="xs"]::before,
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="xs"]::after {
+	font-family: 'Alkami' !important;
+	font-size: 1.6rem;
+}
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="sm"]::before,
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="sm"]::after {
+	font-family: 'Alkami' !important;
+	font-size: 2.0rem;
+}
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="md"]::before,
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="md"]::after {
+	font-family: 'Alkami' !important;
+	font-size: 2.4rem;
+}
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="lg"]::before,
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="lg"]::after {
+	font-family: 'Alkami' !important;
+	font-size: 2.8rem;
+}
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="xl"]::before,
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="xl"]::after {
+	font-family: 'Alkami' !important;
+	font-size: 3.2rem;
+}
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="2xl"]::before,
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="2xl"]::after {
+	font-family: 'Alkami' !important;
+	font-size: 4.2rem;
+}
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="3xl"]::before,
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="3xl"]::after {
+	font-family: 'Alkami' !important;
+	font-size: 6.4rem;
+}
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="4xl"]::before,
+[class*="font-icon-"][class*="font-icon-"][data-icon-size="4xl"]::after {
+	font-family: 'Alkami' !important;
+	font-size: 7.2rem;
+}
+
+/* Font icon global overrides */
+.font-icon-star-filled {
+	color: #D7A300;
+}
+
+.font-icon-accounts.font-icon-accounts:not([data-font-options*="after"])::before,
+.font-icon-accounts.font-icon-accounts[data-font-options*="before"]::before,
+.font-icon-accounts.font-icon-accounts[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA0C' !important;
+}
+.font-icon-ach-payments.font-icon-ach-payments:not([data-font-options*="after"])::before,
+.font-icon-ach-payments.font-icon-ach-payments[data-font-options*="before"]::before,
+.font-icon-ach-payments.font-icon-ach-payments[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA0E' !important;
+}
+.font-icon-ach-collections.font-icon-ach-collections:not([data-font-options*="after"])::before,
+.font-icon-ach-collections.font-icon-ach-collections[data-font-options*="before"]::before,
+.font-icon-ach-collections.font-icon-ach-collections[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA0E' !important;
+}
+.font-icon-add.font-icon-add:not([data-font-options*="after"])::before,
+.font-icon-add.font-icon-add[data-font-options*="before"]::before,
+.font-icon-add.font-icon-add[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA10' !important;
+}
+.font-icon-add-account.font-icon-add-account:not([data-font-options*="after"])::before,
+.font-icon-add-account.font-icon-add-account[data-font-options*="before"]::before,
+.font-icon-add-account.font-icon-add-account[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA0F' !important;
+}
+.font-icon-alert.font-icon-alert:not([data-font-options*="after"])::before,
+.font-icon-alert.font-icon-alert[data-font-options*="before"]::before,
+.font-icon-alert.font-icon-alert[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC1D' !important;
+}
+.font-icon-alert-filled.font-icon-alert-filled:not([data-font-options*="after"])::before,
+.font-icon-alert-filled.font-icon-alert-filled[data-font-options*="before"]::before,
+.font-icon-alert-filled.font-icon-alert-filled[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA11' !important;
+}
+.font-icon-alert-line.font-icon-alert-line:not([data-font-options*="after"])::before,
+.font-icon-alert-line.font-icon-alert-line[data-font-options*="before"]::before,
+.font-icon-alert-line.font-icon-alert-line[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA12' !important;
+}
+.font-icon-american-share.font-icon-american-share:not([data-font-options*="after"])::before,
+.font-icon-american-share.font-icon-american-share[data-font-options*="before"]::before,
+.font-icon-american-share.font-icon-american-share[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB99' !important;
+}
+.font-icon-android.font-icon-android:not([data-font-options*="after"])::before,
+.font-icon-android.font-icon-android[data-font-options*="before"]::before,
+.font-icon-android.font-icon-android[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB9A' !important;
+}
+.font-icon-angle-left.font-icon-angle-left:not([data-font-options*="after"])::before,
+.font-icon-angle-left.font-icon-angle-left[data-font-options*="before"]::before,
+.font-icon-angle-left.font-icon-angle-left[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA14' !important;
+}
+.font-icon-angle-left-double.font-icon-angle-left-double:not([data-font-options*="after"])::before,
+.font-icon-angle-left-double.font-icon-angle-left-double[data-font-options*="before"]::before,
+.font-icon-angle-left-double.font-icon-angle-left-double[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED29' !important;
+}
+.font-icon-angle-right.font-icon-angle-right:not([data-font-options*="after"])::before,
+.font-icon-angle-right.font-icon-angle-right[data-font-options*="before"]::before,
+.font-icon-angle-right.font-icon-angle-right[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA16' !important;
+}
+.font-icon-angle.font-icon-angle:not([data-font-options*="after"])::before,
+.font-icon-angle.font-icon-angle[data-font-options*="before"]::before,
+.font-icon-angle.font-icon-angle[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA16' !important;
+}
+.font-icon-angle-right-circle.font-icon-angle-right-circle:not([data-font-options*="after"])::before,
+.font-icon-angle-right-circle.font-icon-angle-right-circle[data-font-options*="before"]::before,
+.font-icon-angle-right-circle.font-icon-angle-right-circle[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA15' !important;
+}
+.font-icon-angle-right-double.font-icon-angle-right-double:not([data-font-options*="after"])::before,
+.font-icon-angle-right-double.font-icon-angle-right-double[data-font-options*="before"]::before,
+.font-icon-angle-right-double.font-icon-angle-right-double[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EBDE' !important;
+}
+.font-icon-applications.font-icon-applications:not([data-font-options*="after"])::before,
+.font-icon-applications.font-icon-applications[data-font-options*="before"]::before,
+.font-icon-applications.font-icon-applications[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA18' !important;
+}
+.font-icon-arrange.font-icon-arrange:not([data-font-options*="after"])::before,
+.font-icon-arrange.font-icon-arrange[data-font-options*="before"]::before,
+.font-icon-arrange.font-icon-arrange[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA01' !important;
+}
+.font-icon-arrow-down.font-icon-arrow-down:not([data-font-options*="after"])::before,
+.font-icon-arrow-down.font-icon-arrow-down[data-font-options*="before"]::before,
+.font-icon-arrow-down.font-icon-arrow-down[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED2A' !important;
+}
+.font-icon-arrow-left.font-icon-arrow-left:not([data-font-options*="after"])::before,
+.font-icon-arrow-left.font-icon-arrow-left[data-font-options*="before"]::before,
+.font-icon-arrow-left.font-icon-arrow-left[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA19' !important;
+}
+.font-icon-arrow-right.font-icon-arrow-right:not([data-font-options*="after"])::before,
+.font-icon-arrow-right.font-icon-arrow-right[data-font-options*="before"]::before,
+.font-icon-arrow-right.font-icon-arrow-right[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB16' !important;
+}
+.font-icon-arrow.font-icon-arrow:not([data-font-options*="after"])::before,
+.font-icon-arrow.font-icon-arrow[data-font-options*="before"]::before,
+.font-icon-arrow.font-icon-arrow[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB16' !important;
+}
+.font-icon-arrow-up.font-icon-arrow-up:not([data-font-options*="after"])::before,
+.font-icon-arrow-up.font-icon-arrow-up[data-font-options*="before"]::before,
+.font-icon-arrow-up.font-icon-arrow-up[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED2B' !important;
+}
+.font-icon-article.font-icon-article:not([data-font-options*="after"])::before,
+.font-icon-article.font-icon-article[data-font-options*="before"]::before,
+.font-icon-article.font-icon-article[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA1B' !important;
+}
+.font-icon-asi.font-icon-asi:not([data-font-options*="after"])::before,
+.font-icon-asi.font-icon-asi[data-font-options*="before"]::before,
+.font-icon-asi.font-icon-asi[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED2C' !important;
+}
+.font-icon-atm_locator.font-icon-atm_locator:not([data-font-options*="after"])::before,
+.font-icon-atm_locator.font-icon-atm_locator[data-font-options*="before"]::before,
+.font-icon-atm_locator.font-icon-atm_locator[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA1D' !important;
+}
+.font-icon-atm.font-icon-atm:not([data-font-options*="after"])::before,
+.font-icon-atm.font-icon-atm[data-font-options*="before"]::before,
+.font-icon-atm.font-icon-atm[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA1D' !important;
+}
+.font-icon-atm-locator.font-icon-atm-locator:not([data-font-options*="after"])::before,
+.font-icon-atm-locator.font-icon-atm-locator[data-font-options*="before"]::before,
+.font-icon-atm-locator.font-icon-atm-locator[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED66' !important;
+}
+.font-icon-attachment.font-icon-attachment:not([data-font-options*="after"])::before,
+.font-icon-attachment.font-icon-attachment[data-font-options*="before"]::before,
+.font-icon-attachment.font-icon-attachment[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB17' !important;
+}
+.font-icon-authentication.font-icon-authentication:not([data-font-options*="after"])::before,
+.font-icon-authentication.font-icon-authentication[data-font-options*="before"]::before,
+.font-icon-authentication.font-icon-authentication[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA1E' !important;
+}
+.font-icon-authorization.font-icon-authorization:not([data-font-options*="after"])::before,
+.font-icon-authorization.font-icon-authorization[data-font-options*="before"]::before,
+.font-icon-authorization.font-icon-authorization[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED67' !important;
+}
+.font-icon-authorization-requests.font-icon-authorization-requests:not([data-font-options*="after"])::before,
+.font-icon-authorization-requests.font-icon-authorization-requests[data-font-options*="before"]::before,
+.font-icon-authorization-requests.font-icon-authorization-requests[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA1F' !important;
+}
+.font-icon-b-corp-tall.font-icon-b-corp-tall:not([data-font-options*="after"])::before,
+.font-icon-b-corp-tall.font-icon-b-corp-tall[data-font-options*="before"]::before,
+.font-icon-b-corp-tall.font-icon-b-corp-tall[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC14' !important;
+}
+.font-icon-b-corp1.font-icon-b-corp1:not([data-font-options*="after"])::before,
+.font-icon-b-corp1.font-icon-b-corp1[data-font-options*="before"]::before,
+.font-icon-b-corp1.font-icon-b-corp1[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC15' !important;
+}
+.font-icon-b-corp2.font-icon-b-corp2:not([data-font-options*="after"])::before,
+.font-icon-b-corp2.font-icon-b-corp2[data-font-options*="before"]::before,
+.font-icon-b-corp2.font-icon-b-corp2[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC16' !important;
+}
+.font-icon-b-corp3.font-icon-b-corp3:not([data-font-options*="after"])::before,
+.font-icon-b-corp3.font-icon-b-corp3[data-font-options*="before"]::before,
+.font-icon-b-corp3.font-icon-b-corp3[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC17' !important;
+}
+.font-icon-backspace.font-icon-backspace:not([data-font-options*="after"])::before,
+.font-icon-backspace.font-icon-backspace[data-font-options*="before"]::before,
+.font-icon-backspace.font-icon-backspace[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED73' !important;
+}
+.font-icon-bill-pay.font-icon-bill-pay:not([data-font-options*="after"])::before,
+.font-icon-bill-pay.font-icon-bill-pay[data-font-options*="before"]::before,
+.font-icon-bill-pay.font-icon-bill-pay[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA20' !important;
+}
+.font-icon-bills-utilities.font-icon-bills-utilities:not([data-font-options*="after"])::before,
+.font-icon-bills-utilities.font-icon-bills-utilities[data-font-options*="before"]::before,
+.font-icon-bills-utilities.font-icon-bills-utilities[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA21' !important;
+}
+.font-icon-bitcoin.font-icon-bitcoin:not([data-font-options*="after"])::before,
+.font-icon-bitcoin.font-icon-bitcoin[data-font-options*="before"]::before,
+.font-icon-bitcoin.font-icon-bitcoin[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED68' !important;
+}
+.font-icon-blockchain.font-icon-blockchain:not([data-font-options*="after"])::before,
+.font-icon-blockchain.font-icon-blockchain[data-font-options*="before"]::before,
+.font-icon-blockchain.font-icon-blockchain[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED71' !important;
+}
+.font-icon-bolt.font-icon-bolt:not([data-font-options*="after"])::before,
+.font-icon-bolt.font-icon-bolt[data-font-options*="before"]::before,
+.font-icon-bolt.font-icon-bolt[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC1E' !important;
+}
+.font-icon-bookmark.font-icon-bookmark:not([data-font-options*="after"])::before,
+.font-icon-bookmark.font-icon-bookmark[data-font-options*="before"]::before,
+.font-icon-bookmark.font-icon-bookmark[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA22' !important;
+}
+.font-icon-budget-tools.font-icon-budget-tools:not([data-font-options*="after"])::before,
+.font-icon-budget-tools.font-icon-budget-tools[data-font-options*="before"]::before,
+.font-icon-budget-tools.font-icon-budget-tools[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA23' !important;
+}
+.font-icon-budgets.font-icon-budgets:not([data-font-options*="after"])::before,
+.font-icon-budgets.font-icon-budgets[data-font-options*="before"]::before,
+.font-icon-budgets.font-icon-budgets[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA24' !important;
+}
+.font-icon-bulls-and-bears.font-icon-bulls-and-bears:not([data-font-options*="after"])::before,
+.font-icon-bulls-and-bears.font-icon-bulls-and-bears[data-font-options*="before"]::before,
+.font-icon-bulls-and-bears.font-icon-bulls-and-bears[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA25' !important;
+}
+.font-icon-business.font-icon-business:not([data-font-options*="after"])::before,
+.font-icon-business.font-icon-business[data-font-options*="before"]::before,
+.font-icon-business.font-icon-business[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA28' !important;
+}
+.font-icon-business-admin.font-icon-business-admin:not([data-font-options*="after"])::before,
+.font-icon-business-admin.font-icon-business-admin[data-font-options*="before"]::before,
+.font-icon-business-admin.font-icon-business-admin[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA26' !important;
+}
+.font-icon-business-household.font-icon-business-household:not([data-font-options*="after"])::before,
+.font-icon-business-household.font-icon-business-household[data-font-options*="before"]::before,
+.font-icon-business-household.font-icon-business-household[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED69' !important;
+}
+.font-icon-business-services.font-icon-business-services:not([data-font-options*="after"])::before,
+.font-icon-business-services.font-icon-business-services[data-font-options*="before"]::before,
+.font-icon-business-services.font-icon-business-services[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED2D' !important;
+}
+.font-icon-business_services.font-icon-business_services:not([data-font-options*="after"])::before,
+.font-icon-business_services.font-icon-business_services[data-font-options*="before"]::before,
+.font-icon-business_services.font-icon-business_services[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED2D' !important;
+}
+.font-icon-business-setup.font-icon-business-setup:not([data-font-options*="after"])::before,
+.font-icon-business-setup.font-icon-business-setup[data-font-options*="before"]::before,
+.font-icon-business-setup.font-icon-business-setup[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA27' !important;
+}
+.font-icon-calc-and-calendar.font-icon-calc-and-calendar:not([data-font-options*="after"])::before,
+.font-icon-calc-and-calendar.font-icon-calc-and-calendar[data-font-options*="before"]::before,
+.font-icon-calc-and-calendar.font-icon-calc-and-calendar[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA2A' !important;
+}
+.font-icon-calculator.font-icon-calculator:not([data-font-options*="after"])::before,
+.font-icon-calculator.font-icon-calculator[data-font-options*="before"]::before,
+.font-icon-calculator.font-icon-calculator[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA2B' !important;
+}
+.font-icon-calendar.font-icon-calendar:not([data-font-options*="after"])::before,
+.font-icon-calendar.font-icon-calendar[data-font-options*="before"]::before,
+.font-icon-calendar.font-icon-calendar[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA2C' !important;
+}
+.font-icon-cancel-x.font-icon-cancel-x:not([data-font-options*="after"])::before,
+.font-icon-cancel-x.font-icon-cancel-x[data-font-options*="before"]::before,
+.font-icon-cancel-x.font-icon-cancel-x[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA2D' !important;
+}
+.font-icon-times.font-icon-times:not([data-font-options*="after"])::before,
+.font-icon-times.font-icon-times[data-font-options*="before"]::before,
+.font-icon-times.font-icon-times[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA2D' !important;
+}
+.font-icon-canceled.font-icon-canceled:not([data-font-options*="after"])::before,
+.font-icon-canceled.font-icon-canceled[data-font-options*="before"]::before,
+.font-icon-canceled.font-icon-canceled[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA2E' !important;
+}
+.font-icon-times-circle.font-icon-times-circle:not([data-font-options*="after"])::before,
+.font-icon-times-circle.font-icon-times-circle[data-font-options*="before"]::before,
+.font-icon-times-circle.font-icon-times-circle[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA2E' !important;
+}
+.font-icon-card-amex-full.font-icon-card-amex-full:not([data-font-options*="after"])::before,
+.font-icon-card-amex-full.font-icon-card-amex-full[data-font-options*="before"]::before,
+.font-icon-card-amex-full.font-icon-card-amex-full[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED2E' !important;
+}
+.font-icon-card-amex-simple.font-icon-card-amex-simple:not([data-font-options*="after"])::before,
+.font-icon-card-amex-simple.font-icon-card-amex-simple[data-font-options*="before"]::before,
+.font-icon-card-amex-simple.font-icon-card-amex-simple[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED2F' !important;
+}
+.font-icon-card-discover.font-icon-card-discover:not([data-font-options*="after"])::before,
+.font-icon-card-discover.font-icon-card-discover[data-font-options*="before"]::before,
+.font-icon-card-discover.font-icon-card-discover[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED30' !important;
+}
+.font-icon-card-manage-pay.font-icon-card-manage-pay:not([data-font-options*="after"])::before,
+.font-icon-card-manage-pay.font-icon-card-manage-pay[data-font-options*="before"]::before,
+.font-icon-card-manage-pay.font-icon-card-manage-pay[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA32' !important;
+}
+.font-icon-card-mastercard-full.font-icon-card-mastercard-full:not([data-font-options*="after"])::before,
+.font-icon-card-mastercard-full.font-icon-card-mastercard-full[data-font-options*="before"]::before,
+.font-icon-card-mastercard-full.font-icon-card-mastercard-full[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED31' !important;
+}
+.font-icon-card-mastercard-simple.font-icon-card-mastercard-simple:not([data-font-options*="after"])::before,
+.font-icon-card-mastercard-simple.font-icon-card-mastercard-simple[data-font-options*="before"]::before,
+.font-icon-card-mastercard-simple.font-icon-card-mastercard-simple[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED32' !important;
+}
+.font-icon-card-visa.font-icon-card-visa:not([data-font-options*="after"])::before,
+.font-icon-card-visa.font-icon-card-visa[data-font-options*="before"]::before,
+.font-icon-card-visa.font-icon-card-visa[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED33' !important;
+}
+.font-icon-cardless-cash.font-icon-cardless-cash:not([data-font-options*="after"])::before,
+.font-icon-cardless-cash.font-icon-cardless-cash[data-font-options*="before"]::before,
+.font-icon-cardless-cash.font-icon-cardless-cash[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC1B' !important;
+}
+.font-icon-caret.font-icon-caret:not([data-font-options*="after"])::before,
+.font-icon-caret.font-icon-caret[data-font-options*="before"]::before,
+.font-icon-caret.font-icon-caret[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED74' !important;
+}
+.font-icon-caret-left.font-icon-caret-left:not([data-font-options*="after"])::before,
+.font-icon-caret-left.font-icon-caret-left[data-font-options*="before"]::before,
+.font-icon-caret-left.font-icon-caret-left[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC1F' !important;
+}
+.font-icon-caret-right.font-icon-caret-right:not([data-font-options*="after"])::before,
+.font-icon-caret-right.font-icon-caret-right[data-font-options*="before"]::before,
+.font-icon-caret-right.font-icon-caret-right[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC20' !important;
+}
+.font-icon-caret-up.font-icon-caret-up:not([data-font-options*="after"])::before,
+.font-icon-caret-up.font-icon-caret-up[data-font-options*="before"]::before,
+.font-icon-caret-up.font-icon-caret-up[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC21' !important;
+}
+.font-icon-cash-edge.font-icon-cash-edge:not([data-font-options*="after"])::before,
+.font-icon-cash-edge.font-icon-cash-edge[data-font-options*="before"]::before,
+.font-icon-cash-edge.font-icon-cash-edge[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA36' !important;
+}
+.font-icon-cashback.font-icon-cashback:not([data-font-options*="after"])::before,
+.font-icon-cashback.font-icon-cashback[data-font-options*="before"]::before,
+.font-icon-cashback.font-icon-cashback[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA37' !important;
+}
+.font-icon-cdfi.font-icon-cdfi:not([data-font-options*="after"])::before,
+.font-icon-cdfi.font-icon-cdfi[data-font-options*="before"]::before,
+.font-icon-cdfi.font-icon-cdfi[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC18' !important;
+}
+.font-icon-chat.font-icon-chat:not([data-font-options*="after"])::before,
+.font-icon-chat.font-icon-chat[data-font-options*="before"]::before,
+.font-icon-chat.font-icon-chat[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA3A' !important;
+}
+.font-icon-chat-filled.font-icon-chat-filled:not([data-font-options*="after"])::before,
+.font-icon-chat-filled.font-icon-chat-filled[data-font-options*="before"]::before,
+.font-icon-chat-filled.font-icon-chat-filled[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA3A' !important;
+}
+.font-icon-chat-line.font-icon-chat-line:not([data-font-options*="after"])::before,
+.font-icon-chat-line.font-icon-chat-line[data-font-options*="before"]::before,
+.font-icon-chat-line.font-icon-chat-line[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA3A' !important;
+}
+.font-icon-live-chat.font-icon-live-chat:not([data-font-options*="after"])::before,
+.font-icon-live-chat.font-icon-live-chat[data-font-options*="before"]::before,
+.font-icon-live-chat.font-icon-live-chat[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA3A' !important;
+}
+.font-icon-chat-bubble.font-icon-chat-bubble:not([data-font-options*="after"])::before,
+.font-icon-chat-bubble.font-icon-chat-bubble[data-font-options*="before"]::before,
+.font-icon-chat-bubble.font-icon-chat-bubble[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAD5' !important;
+}
+.font-icon-check.font-icon-check:not([data-font-options*="after"])::before,
+.font-icon-check.font-icon-check[data-font-options*="before"]::before,
+.font-icon-check.font-icon-check[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA3C' !important;
+}
+.font-icon-checkmark.font-icon-checkmark:not([data-font-options*="after"])::before,
+.font-icon-checkmark.font-icon-checkmark[data-font-options*="before"]::before,
+.font-icon-checkmark.font-icon-checkmark[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA3C' !important;
+}
+.font-icon-check-services.font-icon-check-services:not([data-font-options*="after"])::before,
+.font-icon-check-services.font-icon-check-services[data-font-options*="before"]::before,
+.font-icon-check-services.font-icon-check-services[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA3B' !important;
+}
+.font-icon-chimney.font-icon-chimney:not([data-font-options*="after"])::before,
+.font-icon-chimney.font-icon-chimney[data-font-options*="before"]::before,
+.font-icon-chimney.font-icon-chimney[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC22' !important;
+}
+.font-icon-circle-facebook-round.font-icon-circle-facebook-round:not([data-font-options*="after"])::before,
+.font-icon-circle-facebook-round.font-icon-circle-facebook-round[data-font-options*="before"]::before,
+.font-icon-circle-facebook-round.font-icon-circle-facebook-round[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED34' !important;
+}
+.font-icon-circle-facebook.font-icon-circle-facebook:not([data-font-options*="after"])::before,
+.font-icon-circle-facebook.font-icon-circle-facebook[data-font-options*="before"]::before,
+.font-icon-circle-facebook.font-icon-circle-facebook[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED34' !important;
+}
+.font-icon-circle-facebook-square.font-icon-circle-facebook-square:not([data-font-options*="after"])::before,
+.font-icon-circle-facebook-square.font-icon-circle-facebook-square[data-font-options*="before"]::before,
+.font-icon-circle-facebook-square.font-icon-circle-facebook-square[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED56' !important;
+}
+.font-icon-circle-filled.font-icon-circle-filled:not([data-font-options*="after"])::before,
+.font-icon-circle-filled.font-icon-circle-filled[data-font-options*="before"]::before,
+.font-icon-circle-filled.font-icon-circle-filled[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA42' !important;
+}
+.font-icon-circle-linkedin-round.font-icon-circle-linkedin-round:not([data-font-options*="after"])::before,
+.font-icon-circle-linkedin-round.font-icon-circle-linkedin-round[data-font-options*="before"]::before,
+.font-icon-circle-linkedin-round.font-icon-circle-linkedin-round[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED35' !important;
+}
+.font-icon-circle-linkedin.font-icon-circle-linkedin:not([data-font-options*="after"])::before,
+.font-icon-circle-linkedin.font-icon-circle-linkedin[data-font-options*="before"]::before,
+.font-icon-circle-linkedin.font-icon-circle-linkedin[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED35' !important;
+}
+.font-icon-circle-linkedin-square.font-icon-circle-linkedin-square:not([data-font-options*="after"])::before,
+.font-icon-circle-linkedin-square.font-icon-circle-linkedin-square[data-font-options*="before"]::before,
+.font-icon-circle-linkedin-square.font-icon-circle-linkedin-square[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED57' !important;
+}
+.font-icon-circle-twitter-round.font-icon-circle-twitter-round:not([data-font-options*="after"])::before,
+.font-icon-circle-twitter-round.font-icon-circle-twitter-round[data-font-options*="before"]::before,
+.font-icon-circle-twitter-round.font-icon-circle-twitter-round[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED36' !important;
+}
+.font-icon-circle-twitter.font-icon-circle-twitter:not([data-font-options*="after"])::before,
+.font-icon-circle-twitter.font-icon-circle-twitter[data-font-options*="before"]::before,
+.font-icon-circle-twitter.font-icon-circle-twitter[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED36' !important;
+}
+.font-icon-circle-twitter-square.font-icon-circle-twitter-square:not([data-font-options*="after"])::before,
+.font-icon-circle-twitter-square.font-icon-circle-twitter-square[data-font-options*="before"]::before,
+.font-icon-circle-twitter-square.font-icon-circle-twitter-square[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED58' !important;
+}
+.font-icon-compass.font-icon-compass:not([data-font-options*="after"])::before,
+.font-icon-compass.font-icon-compass[data-font-options*="before"]::before,
+.font-icon-compass.font-icon-compass[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA47' !important;
+}
+.font-icon-compose.font-icon-compose:not([data-font-options*="after"])::before,
+.font-icon-compose.font-icon-compose[data-font-options*="before"]::before,
+.font-icon-compose.font-icon-compose[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB18' !important;
+}
+.font-icon-contact-book.font-icon-contact-book:not([data-font-options*="after"])::before,
+.font-icon-contact-book.font-icon-contact-book[data-font-options*="before"]::before,
+.font-icon-contact-book.font-icon-contact-book[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA48' !important;
+}
+.font-icon-content.font-icon-content:not([data-font-options*="after"])::before,
+.font-icon-content.font-icon-content[data-font-options*="before"]::before,
+.font-icon-content.font-icon-content[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA49' !important;
+}
+.font-icon-coop.font-icon-coop:not([data-font-options*="after"])::before,
+.font-icon-coop.font-icon-coop[data-font-options*="before"]::before,
+.font-icon-coop.font-icon-coop[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED39' !important;
+}
+.font-icon-coop-atm.font-icon-coop-atm:not([data-font-options*="after"])::before,
+.font-icon-coop-atm.font-icon-coop-atm[data-font-options*="before"]::before,
+.font-icon-coop-atm.font-icon-coop-atm[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED37' !important;
+}
+.font-icon-coop-shared-branch.font-icon-coop-shared-branch:not([data-font-options*="after"])::before,
+.font-icon-coop-shared-branch.font-icon-coop-shared-branch[data-font-options*="before"]::before,
+.font-icon-coop-shared-branch.font-icon-coop-shared-branch[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED38' !important;
+}
+.font-icon-copy.font-icon-copy:not([data-font-options*="after"])::before,
+.font-icon-copy.font-icon-copy[data-font-options*="before"]::before,
+.font-icon-copy.font-icon-copy[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA0A' !important;
+}
+.font-icon-courtesy-pay.font-icon-courtesy-pay:not([data-font-options*="after"])::before,
+.font-icon-courtesy-pay.font-icon-courtesy-pay[data-font-options*="before"]::before,
+.font-icon-courtesy-pay.font-icon-courtesy-pay[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA4D' !important;
+}
+.font-icon-loan-advance.font-icon-loan-advance:not([data-font-options*="after"])::before,
+.font-icon-loan-advance.font-icon-loan-advance[data-font-options*="before"]::before,
+.font-icon-loan-advance.font-icon-loan-advance[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA4D' !important;
+}
+.font-icon-u-consumer-lending.font-icon-u-consumer-lending:not([data-font-options*="after"])::before,
+.font-icon-u-consumer-lending.font-icon-u-consumer-lending[data-font-options*="before"]::before,
+.font-icon-u-consumer-lending.font-icon-u-consumer-lending[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA4D' !important;
+}
+.font-icon-credit.font-icon-credit:not([data-font-options*="after"])::before,
+.font-icon-credit.font-icon-credit[data-font-options*="before"]::before,
+.font-icon-credit.font-icon-credit[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED6A' !important;
+}
+.font-icon-credit-card.font-icon-credit-card:not([data-font-options*="after"])::before,
+.font-icon-credit-card.font-icon-credit-card[data-font-options*="before"]::before,
+.font-icon-credit-card.font-icon-credit-card[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA4F' !important;
+}
+.font-icon-crosshair.font-icon-crosshair:not([data-font-options*="after"])::before,
+.font-icon-crosshair.font-icon-crosshair[data-font-options*="before"]::before,
+.font-icon-crosshair.font-icon-crosshair[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA50' !important;
+}
+.font-icon-crypto.font-icon-crypto:not([data-font-options*="after"])::before,
+.font-icon-crypto.font-icon-crypto[data-font-options*="before"]::before,
+.font-icon-crypto.font-icon-crypto[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED7E' !important;
+}
+.font-icon-csv.font-icon-csv:not([data-font-options*="after"])::before,
+.font-icon-csv.font-icon-csv[data-font-options*="before"]::before,
+.font-icon-csv.font-icon-csv[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA04' !important;
+}
+.font-icon-currency-dollar.font-icon-currency-dollar:not([data-font-options*="after"])::before,
+.font-icon-currency-dollar.font-icon-currency-dollar[data-font-options*="before"]::before,
+.font-icon-currency-dollar.font-icon-currency-dollar[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED6B' !important;
+}
+.font-icon-currency-euro.font-icon-currency-euro:not([data-font-options*="after"])::before,
+.font-icon-currency-euro.font-icon-currency-euro[data-font-options*="before"]::before,
+.font-icon-currency-euro.font-icon-currency-euro[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED6C' !important;
+}
+.font-icon-currency-pound.font-icon-currency-pound:not([data-font-options*="after"])::before,
+.font-icon-currency-pound.font-icon-currency-pound[data-font-options*="before"]::before,
+.font-icon-currency-pound.font-icon-currency-pound[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED6D' !important;
+}
+.font-icon-cut-out.font-icon-cut-out:not([data-font-options*="after"])::before,
+.font-icon-cut-out.font-icon-cut-out[data-font-options*="before"]::before,
+.font-icon-cut-out.font-icon-cut-out[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA51' !important;
+}
+.font-icon-dashboard.font-icon-dashboard:not([data-font-options*="after"])::before,
+.font-icon-dashboard.font-icon-dashboard[data-font-options*="before"]::before,
+.font-icon-dashboard.font-icon-dashboard[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA52' !important;
+}
+.font-icon-debit.font-icon-debit:not([data-font-options*="after"])::before,
+.font-icon-debit.font-icon-debit[data-font-options*="before"]::before,
+.font-icon-debit.font-icon-debit[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED6E' !important;
+}
+.font-icon-delete.font-icon-delete:not([data-font-options*="after"])::before,
+.font-icon-delete.font-icon-delete[data-font-options*="before"]::before,
+.font-icon-delete.font-icon-delete[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA53' !important;
+}
+.font-icon-design-your-card.font-icon-design-your-card:not([data-font-options*="after"])::before,
+.font-icon-design-your-card.font-icon-design-your-card[data-font-options*="before"]::before,
+.font-icon-design-your-card.font-icon-design-your-card[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA54' !important;
+}
+.font-icon-desktop.font-icon-desktop:not([data-font-options*="after"])::before,
+.font-icon-desktop.font-icon-desktop[data-font-options*="before"]::before,
+.font-icon-desktop.font-icon-desktop[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA55' !important;
+}
+.font-icon-developer.font-icon-developer:not([data-font-options*="after"])::before,
+.font-icon-developer.font-icon-developer[data-font-options*="before"]::before,
+.font-icon-developer.font-icon-developer[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA56' !important;
+}
+.font-icon-direct-deposit.font-icon-direct-deposit:not([data-font-options*="after"])::before,
+.font-icon-direct-deposit.font-icon-direct-deposit[data-font-options*="before"]::before,
+.font-icon-direct-deposit.font-icon-direct-deposit[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA57' !important;
+}
+.font-icon-dispute.font-icon-dispute:not([data-font-options*="after"])::before,
+.font-icon-dispute.font-icon-dispute[data-font-options*="before"]::before,
+.font-icon-dispute.font-icon-dispute[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA58' !important;
+}
+.font-icon-document.font-icon-document:not([data-font-options*="after"])::before,
+.font-icon-document.font-icon-document[data-font-options*="before"]::before,
+.font-icon-document.font-icon-document[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA59' !important;
+}
+.font-icon-dollar.font-icon-dollar:not([data-font-options*="after"])::before,
+.font-icon-dollar.font-icon-dollar[data-font-options*="before"]::before,
+.font-icon-dollar.font-icon-dollar[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA5B' !important;
+}
+.font-icon-dollar-circle.font-icon-dollar-circle:not([data-font-options*="after"])::before,
+.font-icon-dollar-circle.font-icon-dollar-circle[data-font-options*="before"]::before,
+.font-icon-dollar-circle.font-icon-dollar-circle[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA5A' !important;
+}
+.font-icon-double-chat.font-icon-double-chat:not([data-font-options*="after"])::before,
+.font-icon-double-chat.font-icon-double-chat[data-font-options*="before"]::before,
+.font-icon-double-chat.font-icon-double-chat[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA5C' !important;
+}
+.font-icon-download.font-icon-download:not([data-font-options*="after"])::before,
+.font-icon-download.font-icon-download[data-font-options*="before"]::before,
+.font-icon-download.font-icon-download[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA5D' !important;
+}
+.font-icon-eb-apply.font-icon-eb-apply:not([data-font-options*="after"])::before,
+.font-icon-eb-apply.font-icon-eb-apply[data-font-options*="before"]::before,
+.font-icon-eb-apply.font-icon-eb-apply[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA5E' !important;
+}
+.font-icon-eb-enroll.font-icon-eb-enroll:not([data-font-options*="after"])::before,
+.font-icon-eb-enroll.font-icon-eb-enroll[data-font-options*="before"]::before,
+.font-icon-eb-enroll.font-icon-eb-enroll[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA5F' !important;
+}
+.font-icon-ebill.font-icon-ebill:not([data-font-options*="after"])::before,
+.font-icon-ebill.font-icon-ebill[data-font-options*="before"]::before,
+.font-icon-ebill.font-icon-ebill[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA60' !important;
+}
+.font-icon-edit.font-icon-edit:not([data-font-options*="after"])::before,
+.font-icon-edit.font-icon-edit[data-font-options*="before"]::before,
+.font-icon-edit.font-icon-edit[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA62' !important;
+}
+.font-icon-edit-info.font-icon-edit-info:not([data-font-options*="after"])::before,
+.font-icon-edit-info.font-icon-edit-info[data-font-options*="before"]::before,
+.font-icon-edit-info.font-icon-edit-info[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA62' !important;
+}
+.font-icon-edit-multiple.font-icon-edit-multiple:not([data-font-options*="after"])::before,
+.font-icon-edit-multiple.font-icon-edit-multiple[data-font-options*="before"]::before,
+.font-icon-edit-multiple.font-icon-edit-multiple[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA62' !important;
+}
+.font-icon-edocs.font-icon-edocs:not([data-font-options*="after"])::before,
+.font-icon-edocs.font-icon-edocs[data-font-options*="before"]::before,
+.font-icon-edocs.font-icon-edocs[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA63' !important;
+}
+.font-icon-education.font-icon-education:not([data-font-options*="after"])::before,
+.font-icon-education.font-icon-education[data-font-options*="before"]::before,
+.font-icon-education.font-icon-education[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA64' !important;
+}
+.font-icon-ehl.font-icon-ehl:not([data-font-options*="after"])::before,
+.font-icon-ehl.font-icon-ehl[data-font-options*="before"]::before,
+.font-icon-ehl.font-icon-ehl[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED3B' !important;
+}
+.font-icon-ehl-no-text.font-icon-ehl-no-text:not([data-font-options*="after"])::before,
+.font-icon-ehl-no-text.font-icon-ehl-no-text[data-font-options*="before"]::before,
+.font-icon-ehl-no-text.font-icon-ehl-no-text[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED3A' !important;
+}
+.font-icon-eho.font-icon-eho:not([data-font-options*="after"])::before,
+.font-icon-eho.font-icon-eho[data-font-options*="before"]::before,
+.font-icon-eho.font-icon-eho[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED3C' !important;
+}
+.font-icon-email-alt.font-icon-email-alt:not([data-font-options*="after"])::before,
+.font-icon-email-alt.font-icon-email-alt[data-font-options*="before"]::before,
+.font-icon-email-alt.font-icon-email-alt[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED62' !important;
+}
+.font-icon-email-at.font-icon-email-at:not([data-font-options*="after"])::before,
+.font-icon-email-at.font-icon-email-at[data-font-options*="before"]::before,
+.font-icon-email-at.font-icon-email-at[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA69' !important;
+}
+.font-icon-entertainment.font-icon-entertainment:not([data-font-options*="after"])::before,
+.font-icon-entertainment.font-icon-entertainment[data-font-options*="before"]::before,
+.font-icon-entertainment.font-icon-entertainment[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA6A' !important;
+}
+.font-icon-envelope.font-icon-envelope:not([data-font-options*="after"])::before,
+.font-icon-envelope.font-icon-envelope[data-font-options*="before"]::before,
+.font-icon-envelope.font-icon-envelope[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA6B' !important;
+}
+.font-icon-eol.font-icon-eol:not([data-font-options*="after"])::before,
+.font-icon-eol.font-icon-eol[data-font-options*="before"]::before,
+.font-icon-eol.font-icon-eol[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED3D' !important;
+}
+.font-icon-error.font-icon-error:not([data-font-options*="after"])::before,
+.font-icon-error.font-icon-error[data-font-options*="before"]::before,
+.font-icon-error.font-icon-error[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA6C' !important;
+}
+.font-icon-paymentoverdue.font-icon-paymentoverdue:not([data-font-options*="after"])::before,
+.font-icon-paymentoverdue.font-icon-paymentoverdue[data-font-options*="before"]::before,
+.font-icon-paymentoverdue.font-icon-paymentoverdue[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA6C' !important;
+}
+.font-icon-esi.font-icon-esi:not([data-font-options*="after"])::before,
+.font-icon-esi.font-icon-esi[data-font-options*="before"]::before,
+.font-icon-esi.font-icon-esi[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED3E' !important;
+}
+.font-icon-esi-tall.font-icon-esi-tall:not([data-font-options*="after"])::before,
+.font-icon-esi-tall.font-icon-esi-tall[data-font-options*="before"]::before,
+.font-icon-esi-tall.font-icon-esi-tall[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC19' !important;
+}
+.font-icon-expand.font-icon-expand:not([data-font-options*="after"])::before,
+.font-icon-expand.font-icon-expand[data-font-options*="before"]::before,
+.font-icon-expand.font-icon-expand[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC23' !important;
+}
+.font-icon-external.font-icon-external:not([data-font-options*="after"])::before,
+.font-icon-external.font-icon-external[data-font-options*="before"]::before,
+.font-icon-external.font-icon-external[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA6E' !important;
+}
+.font-icon-face-id.font-icon-face-id:not([data-font-options*="after"])::before,
+.font-icon-face-id.font-icon-face-id[data-font-options*="before"]::before,
+.font-icon-face-id.font-icon-face-id[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED59' !important;
+}
+.font-icon-facebook.font-icon-facebook:not([data-font-options*="after"])::before,
+.font-icon-facebook.font-icon-facebook[data-font-options*="before"]::before,
+.font-icon-facebook.font-icon-facebook[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED3F' !important;
+}
+.font-icon-facebook-small.font-icon-facebook-small:not([data-font-options*="after"])::before,
+.font-icon-facebook-small.font-icon-facebook-small[data-font-options*="before"]::before,
+.font-icon-facebook-small.font-icon-facebook-small[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED3F' !important;
+}
+.font-icon-family-banking.font-icon-family-banking:not([data-font-options*="after"])::before,
+.font-icon-family-banking.font-icon-family-banking[data-font-options*="before"]::before,
+.font-icon-family-banking.font-icon-family-banking[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA71' !important;
+}
+.font-icon-favorite-filled.font-icon-favorite-filled:not([data-font-options*="after"])::before,
+.font-icon-favorite-filled.font-icon-favorite-filled[data-font-options*="before"]::before,
+.font-icon-favorite-filled.font-icon-favorite-filled[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA0B' !important;
+}
+.font-icon-favorite-outlined.font-icon-favorite-outlined:not([data-font-options*="after"])::before,
+.font-icon-favorite-outlined.font-icon-favorite-outlined[data-font-options*="before"]::before,
+.font-icon-favorite-outlined.font-icon-favorite-outlined[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA13' !important;
+}
+.font-icon-fdic.font-icon-fdic:not([data-font-options*="after"])::before,
+.font-icon-fdic.font-icon-fdic[data-font-options*="before"]::before,
+.font-icon-fdic.font-icon-fdic[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED40' !important;
+}
+.font-icon-fees-charged.font-icon-fees-charged:not([data-font-options*="after"])::before,
+.font-icon-fees-charged.font-icon-fees-charged[data-font-options*="before"]::before,
+.font-icon-fees-charged.font-icon-fees-charged[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED6F' !important;
+}
+.font-icon-fees-charges.font-icon-fees-charges:not([data-font-options*="after"])::before,
+.font-icon-fees-charges.font-icon-fees-charges[data-font-options*="before"]::before,
+.font-icon-fees-charges.font-icon-fees-charges[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED6F' !important;
+}
+.font-icon-fi.font-icon-fi:not([data-font-options*="after"])::before,
+.font-icon-fi.font-icon-fi[data-font-options*="before"]::before,
+.font-icon-fi.font-icon-fi[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA75' !important;
+}
+.font-icon-fi-simple.font-icon-fi-simple:not([data-font-options*="after"])::before,
+.font-icon-fi-simple.font-icon-fi-simple[data-font-options*="before"]::before,
+.font-icon-fi-simple.font-icon-fi-simple[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA75' !important;
+}
+.font-icon-fico.font-icon-fico:not([data-font-options*="after"])::before,
+.font-icon-fico.font-icon-fico[data-font-options*="before"]::before,
+.font-icon-fico.font-icon-fico[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA02' !important;
+}
+.font-icon-ficoscore.font-icon-ficoscore:not([data-font-options*="after"])::before,
+.font-icon-ficoscore.font-icon-ficoscore[data-font-options*="before"]::before,
+.font-icon-ficoscore.font-icon-ficoscore[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA07' !important;
+}
+.font-icon-file-tasks-dollar.font-icon-file-tasks-dollar:not([data-font-options*="after"])::before,
+.font-icon-file-tasks-dollar.font-icon-file-tasks-dollar[data-font-options*="before"]::before,
+.font-icon-file-tasks-dollar.font-icon-file-tasks-dollar[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA76' !important;
+}
+.font-icon-file-tasks-edit.font-icon-file-tasks-edit:not([data-font-options*="after"])::before,
+.font-icon-file-tasks-edit.font-icon-file-tasks-edit[data-font-options*="before"]::before,
+.font-icon-file-tasks-edit.font-icon-file-tasks-edit[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA77' !important;
+}
+.font-icon-filter.font-icon-filter:not([data-font-options*="after"])::before,
+.font-icon-filter.font-icon-filter[data-font-options*="before"]::before,
+.font-icon-filter.font-icon-filter[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA78' !important;
+}
+.font-icon-filter-native.font-icon-filter-native:not([data-font-options*="after"])::before,
+.font-icon-filter-native.font-icon-filter-native[data-font-options*="before"]::before,
+.font-icon-filter-native.font-icon-filter-native[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED75' !important;
+}
+.font-icon-financial.font-icon-financial:not([data-font-options*="after"])::before,
+.font-icon-financial.font-icon-financial[data-font-options*="before"]::before,
+.font-icon-financial.font-icon-financial[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA79' !important;
+}
+.font-icon-food-dining.font-icon-food-dining:not([data-font-options*="after"])::before,
+.font-icon-food-dining.font-icon-food-dining[data-font-options*="before"]::before,
+.font-icon-food-dining.font-icon-food-dining[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA7A' !important;
+}
+.font-icon-forms-and-services.font-icon-forms-and-services:not([data-font-options*="after"])::before,
+.font-icon-forms-and-services.font-icon-forms-and-services[data-font-options*="before"]::before,
+.font-icon-forms-and-services.font-icon-forms-and-services[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA7B' !important;
+}
+.font-icon-frozen.font-icon-frozen:not([data-font-options*="after"])::before,
+.font-icon-frozen.font-icon-frozen[data-font-options*="before"]::before,
+.font-icon-frozen.font-icon-frozen[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED52' !important;
+}
+.font-icon-full-site.font-icon-full-site:not([data-font-options*="after"])::before,
+.font-icon-full-site.font-icon-full-site[data-font-options*="before"]::before,
+.font-icon-full-site.font-icon-full-site[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA7C' !important;
+}
+.font-icon-generic-icon-book.font-icon-generic-icon-book:not([data-font-options*="after"])::before,
+.font-icon-generic-icon-book.font-icon-generic-icon-book[data-font-options*="before"]::before,
+.font-icon-generic-icon-book.font-icon-generic-icon-book[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA7D' !important;
+}
+.font-icon-generic-icon-clipboard.font-icon-generic-icon-clipboard:not([data-font-options*="after"])::before,
+.font-icon-generic-icon-clipboard.font-icon-generic-icon-clipboard[data-font-options*="before"]::before,
+.font-icon-generic-icon-clipboard.font-icon-generic-icon-clipboard[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA7E' !important;
+}
+.font-icon-generic-icon-coins.font-icon-generic-icon-coins:not([data-font-options*="after"])::before,
+.font-icon-generic-icon-coins.font-icon-generic-icon-coins[data-font-options*="before"]::before,
+.font-icon-generic-icon-coins.font-icon-generic-icon-coins[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA7F' !important;
+}
+.font-icon-generic-icon-eisle.font-icon-generic-icon-eisle:not([data-font-options*="after"])::before,
+.font-icon-generic-icon-eisle.font-icon-generic-icon-eisle[data-font-options*="before"]::before,
+.font-icon-generic-icon-eisle.font-icon-generic-icon-eisle[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA80' !important;
+}
+.font-icon-generic-icon-folder.font-icon-generic-icon-folder:not([data-font-options*="after"])::before,
+.font-icon-generic-icon-folder.font-icon-generic-icon-folder[data-font-options*="before"]::before,
+.font-icon-generic-icon-folder.font-icon-generic-icon-folder[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA81' !important;
+}
+.font-icon-generic-icon-money.font-icon-generic-icon-money:not([data-font-options*="after"])::before,
+.font-icon-generic-icon-money.font-icon-generic-icon-money[data-font-options*="before"]::before,
+.font-icon-generic-icon-money.font-icon-generic-icon-money[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA82' !important;
+}
+.font-icon-gifts-donations.font-icon-gifts-donations:not([data-font-options*="after"])::before,
+.font-icon-gifts-donations.font-icon-gifts-donations[data-font-options*="before"]::before,
+.font-icon-gifts-donations.font-icon-gifts-donations[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA83' !important;
+}
+.font-icon-globe.font-icon-globe:not([data-font-options*="after"])::before,
+.font-icon-globe.font-icon-globe[data-font-options*="before"]::before,
+.font-icon-globe.font-icon-globe[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA84' !important;
+}
+.font-icon-grab.font-icon-grab:not([data-font-options*="after"])::before,
+.font-icon-grab.font-icon-grab[data-font-options*="before"]::before,
+.font-icon-grab.font-icon-grab[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED76' !important;
+}
+.font-icon-group.font-icon-group:not([data-font-options*="after"])::before,
+.font-icon-group.font-icon-group[data-font-options*="before"]::before,
+.font-icon-group.font-icon-group[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC24' !important;
+}
+.font-icon-hamburger.font-icon-hamburger:not([data-font-options*="after"])::before,
+.font-icon-hamburger.font-icon-hamburger[data-font-options*="before"]::before,
+.font-icon-hamburger.font-icon-hamburger[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA85' !important;
+}
+.font-icon-menu.font-icon-menu:not([data-font-options*="after"])::before,
+.font-icon-menu.font-icon-menu[data-font-options*="before"]::before,
+.font-icon-menu.font-icon-menu[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA85' !important;
+}
+.font-icon-hamburger2.font-icon-hamburger2:not([data-font-options*="after"])::before,
+.font-icon-hamburger2.font-icon-hamburger2[data-font-options*="before"]::before,
+.font-icon-hamburger2.font-icon-hamburger2[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED77' !important;
+}
+.font-icon-handshake.font-icon-handshake:not([data-font-options*="after"])::before,
+.font-icon-handshake.font-icon-handshake[data-font-options*="before"]::before,
+.font-icon-handshake.font-icon-handshake[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA86' !important;
+}
+.font-icon-happy-face.font-icon-happy-face:not([data-font-options*="after"])::before,
+.font-icon-happy-face.font-icon-happy-face[data-font-options*="before"]::before,
+.font-icon-happy-face.font-icon-happy-face[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC25' !important;
+}
+.font-icon-health-fitness.font-icon-health-fitness:not([data-font-options*="after"])::before,
+.font-icon-health-fitness.font-icon-health-fitness[data-font-options*="before"]::before,
+.font-icon-health-fitness.font-icon-health-fitness[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA87' !important;
+}
+.font-icon-help.font-icon-help:not([data-font-options*="after"])::before,
+.font-icon-help.font-icon-help[data-font-options*="before"]::before,
+.font-icon-help.font-icon-help[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA88' !important;
+}
+.font-icon-question.font-icon-question:not([data-font-options*="after"])::before,
+.font-icon-question.font-icon-question[data-font-options*="before"]::before,
+.font-icon-question.font-icon-question[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA88' !important;
+}
+.font-icon-question-outline.font-icon-question-outline:not([data-font-options*="after"])::before,
+.font-icon-question-outline.font-icon-question-outline[data-font-options*="before"]::before,
+.font-icon-question-outline.font-icon-question-outline[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA88' !important;
+}
+.font-icon-support.font-icon-support:not([data-font-options*="after"])::before,
+.font-icon-support.font-icon-support[data-font-options*="before"]::before,
+.font-icon-support.font-icon-support[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA88' !important;
+}
+.font-icon-hide.font-icon-hide:not([data-font-options*="after"])::before,
+.font-icon-hide.font-icon-hide[data-font-options*="before"]::before,
+.font-icon-hide.font-icon-hide[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA89' !important;
+}
+.font-icon-house.font-icon-house:not([data-font-options*="after"])::before,
+.font-icon-house.font-icon-house[data-font-options*="before"]::before,
+.font-icon-house.font-icon-house[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA8C' !important;
+}
+.font-icon-home-category.font-icon-home-category:not([data-font-options*="after"])::before,
+.font-icon-home-category.font-icon-home-category[data-font-options*="before"]::before,
+.font-icon-home-category.font-icon-home-category[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA8C' !important;
+}
+.font-icon-i-pending.font-icon-i-pending:not([data-font-options*="after"])::before,
+.font-icon-i-pending.font-icon-i-pending[data-font-options*="before"]::before,
+.font-icon-i-pending.font-icon-i-pending[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED78' !important;
+}
+.font-icon-image.font-icon-image:not([data-font-options*="after"])::before,
+.font-icon-image.font-icon-image[data-font-options*="before"]::before,
+.font-icon-image.font-icon-image[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB19' !important;
+}
+.font-icon-income.font-icon-income:not([data-font-options*="after"])::before,
+.font-icon-income.font-icon-income[data-font-options*="before"]::before,
+.font-icon-income.font-icon-income[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA8E' !important;
+}
+.font-icon-incoming-receive-call.font-icon-incoming-receive-call:not([data-font-options*="after"])::before,
+.font-icon-incoming-receive-call.font-icon-incoming-receive-call[data-font-options*="before"]::before,
+.font-icon-incoming-receive-call.font-icon-incoming-receive-call[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB15' !important;
+}
+.font-icon-info.font-icon-info:not([data-font-options*="after"])::before,
+.font-icon-info.font-icon-info[data-font-options*="before"]::before,
+.font-icon-info.font-icon-info[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA90' !important;
+}
+.font-icon-circle-info-filled.font-icon-circle-info-filled:not([data-font-options*="after"])::before,
+.font-icon-circle-info-filled.font-icon-circle-info-filled[data-font-options*="before"]::before,
+.font-icon-circle-info-filled.font-icon-circle-info-filled[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA90' !important;
+}
+.font-icon-circle-info-line.font-icon-circle-info-line:not([data-font-options*="after"])::before,
+.font-icon-circle-info-line.font-icon-circle-info-line[data-font-options*="before"]::before,
+.font-icon-circle-info-line.font-icon-circle-info-line[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA90' !important;
+}
+.font-icon-credit-card-info.font-icon-credit-card-info:not([data-font-options*="after"])::before,
+.font-icon-credit-card-info.font-icon-credit-card-info[data-font-options*="before"]::before,
+.font-icon-credit-card-info.font-icon-credit-card-info[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA90' !important;
+}
+.font-icon-info-serif.font-icon-info-serif:not([data-font-options*="after"])::before,
+.font-icon-info-serif.font-icon-info-serif[data-font-options*="before"]::before,
+.font-icon-info-serif.font-icon-info-serif[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA90' !important;
+}
+.font-icon-infogeneric.font-icon-infogeneric:not([data-font-options*="after"])::before,
+.font-icon-infogeneric.font-icon-infogeneric[data-font-options*="before"]::before,
+.font-icon-infogeneric.font-icon-infogeneric[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA90' !important;
+}
+.font-icon-instagram.font-icon-instagram:not([data-font-options*="after"])::before,
+.font-icon-instagram.font-icon-instagram[data-font-options*="before"]::before,
+.font-icon-instagram.font-icon-instagram[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED41' !important;
+}
+.font-icon-instagram-lite.font-icon-instagram-lite:not([data-font-options*="after"])::before,
+.font-icon-instagram-lite.font-icon-instagram-lite[data-font-options*="before"]::before,
+.font-icon-instagram-lite.font-icon-instagram-lite[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED41' !important;
+}
+.font-icon-instagram-round.font-icon-instagram-round:not([data-font-options*="after"])::before,
+.font-icon-instagram-round.font-icon-instagram-round[data-font-options*="before"]::before,
+.font-icon-instagram-round.font-icon-instagram-round[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED5A' !important;
+}
+.font-icon-instagram-square.font-icon-instagram-square:not([data-font-options*="after"])::before,
+.font-icon-instagram-square.font-icon-instagram-square[data-font-options*="before"]::before,
+.font-icon-instagram-square.font-icon-instagram-square[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED5B' !important;
+}
+.font-icon-investments.font-icon-investments:not([data-font-options*="after"])::before,
+.font-icon-investments.font-icon-investments[data-font-options*="before"]::before,
+.font-icon-investments.font-icon-investments[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA93' !important;
+}
+.font-icon-ios.font-icon-ios:not([data-font-options*="after"])::before,
+.font-icon-ios.font-icon-ios[data-font-options*="before"]::before,
+.font-icon-ios.font-icon-ios[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED5C' !important;
+}
+.font-icon-keychain.font-icon-keychain:not([data-font-options*="after"])::before,
+.font-icon-keychain.font-icon-keychain[data-font-options*="before"]::before,
+.font-icon-keychain.font-icon-keychain[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA94' !important;
+}
+.font-icon-kids.font-icon-kids:not([data-font-options*="after"])::before,
+.font-icon-kids.font-icon-kids[data-font-options*="before"]::before,
+.font-icon-kids.font-icon-kids[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA95' !important;
+}
+.font-icon-linked.font-icon-linked:not([data-font-options*="after"])::before,
+.font-icon-linked.font-icon-linked[data-font-options*="before"]::before,
+.font-icon-linked.font-icon-linked[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA96' !important;
+}
+.font-icon-linkedin.font-icon-linkedin:not([data-font-options*="after"])::before,
+.font-icon-linkedin.font-icon-linkedin[data-font-options*="before"]::before,
+.font-icon-linkedin.font-icon-linkedin[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED42' !important;
+}
+.font-icon-linkedin-isolated.font-icon-linkedin-isolated:not([data-font-options*="after"])::before,
+.font-icon-linkedin-isolated.font-icon-linkedin-isolated[data-font-options*="before"]::before,
+.font-icon-linkedin-isolated.font-icon-linkedin-isolated[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED42' !important;
+}
+.font-icon-list.font-icon-list:not([data-font-options*="after"])::before,
+.font-icon-list.font-icon-list[data-font-options*="before"]::before,
+.font-icon-list.font-icon-list[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA99' !important;
+}
+.font-icon-loading.font-icon-loading:not([data-font-options*="after"])::before,
+.font-icon-loading.font-icon-loading[data-font-options*="before"]::before,
+.font-icon-loading.font-icon-loading[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA9A' !important;
+}
+.font-icon-locate-circle.font-icon-locate-circle:not([data-font-options*="after"])::before,
+.font-icon-locate-circle.font-icon-locate-circle[data-font-options*="before"]::before,
+.font-icon-locate-circle.font-icon-locate-circle[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED79' !important;
+}
+.font-icon-location-marker.font-icon-location-marker:not([data-font-options*="after"])::before,
+.font-icon-location-marker.font-icon-location-marker[data-font-options*="before"]::before,
+.font-icon-location-marker.font-icon-location-marker[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED43' !important;
+}
+.font-icon-locate-marker.font-icon-locate-marker:not([data-font-options*="after"])::before,
+.font-icon-locate-marker.font-icon-locate-marker[data-font-options*="before"]::before,
+.font-icon-locate-marker.font-icon-locate-marker[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED43' !important;
+}
+.font-icon-location-circle.font-icon-location-circle:not([data-font-options*="after"])::before,
+.font-icon-location-circle.font-icon-location-circle[data-font-options*="before"]::before,
+.font-icon-location-circle.font-icon-location-circle[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED43' !important;
+}
+.font-icon-location-pin-bp.font-icon-location-pin-bp:not([data-font-options*="after"])::before,
+.font-icon-location-pin-bp.font-icon-location-pin-bp[data-font-options*="before"]::before,
+.font-icon-location-pin-bp.font-icon-location-pin-bp[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED43' !important;
+}
+.font-icon-locations.font-icon-locations:not([data-font-options*="after"])::before,
+.font-icon-locations.font-icon-locations[data-font-options*="before"]::before,
+.font-icon-locations.font-icon-locations[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED43' !important;
+}
+.font-icon-lock.font-icon-lock:not([data-font-options*="after"])::before,
+.font-icon-lock.font-icon-lock[data-font-options*="before"]::before,
+.font-icon-lock.font-icon-lock[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAA1' !important;
+}
+.font-icon-lock-token.font-icon-lock-token:not([data-font-options*="after"])::before,
+.font-icon-lock-token.font-icon-lock-token[data-font-options*="before"]::before,
+.font-icon-lock-token.font-icon-lock-token[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAA1' !important;
+}
+.font-icon-login-activity.font-icon-login-activity:not([data-font-options*="after"])::before,
+.font-icon-login-activity.font-icon-login-activity[data-font-options*="before"]::before,
+.font-icon-login-activity.font-icon-login-activity[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAA2' !important;
+}
+.font-icon-logout.font-icon-logout:not([data-font-options*="after"])::before,
+.font-icon-logout.font-icon-logout[data-font-options*="before"]::before,
+.font-icon-logout.font-icon-logout[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAA3' !important;
+}
+.font-icon-mail-out.font-icon-mail-out:not([data-font-options*="after"])::before,
+.font-icon-mail-out.font-icon-mail-out[data-font-options*="before"]::before,
+.font-icon-mail-out.font-icon-mail-out[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAA4' !important;
+}
+.font-icon-manage-cards.font-icon-manage-cards:not([data-font-options*="after"])::before,
+.font-icon-manage-cards.font-icon-manage-cards[data-font-options*="before"]::before,
+.font-icon-manage-cards.font-icon-manage-cards[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAA5' !important;
+}
+.font-icon-member-fdic.font-icon-member-fdic:not([data-font-options*="after"])::before,
+.font-icon-member-fdic.font-icon-member-fdic[data-font-options*="before"]::before,
+.font-icon-member-fdic.font-icon-member-fdic[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED44' !important;
+}
+.font-icon-member-services.font-icon-member-services:not([data-font-options*="after"])::before,
+.font-icon-member-services.font-icon-member-services[data-font-options*="before"]::before,
+.font-icon-member-services.font-icon-member-services[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAA7' !important;
+}
+.font-icon-memo.font-icon-memo:not([data-font-options*="after"])::before,
+.font-icon-memo.font-icon-memo[data-font-options*="before"]::before,
+.font-icon-memo.font-icon-memo[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAA8' !important;
+}
+.font-icon-note.font-icon-note:not([data-font-options*="after"])::before,
+.font-icon-note.font-icon-note[data-font-options*="before"]::before,
+.font-icon-note.font-icon-note[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAA8' !important;
+}
+.font-icon-menu2.font-icon-menu2:not([data-font-options*="after"])::before,
+.font-icon-menu2.font-icon-menu2[data-font-options*="before"]::before,
+.font-icon-menu2.font-icon-menu2[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED7A' !important;
+}
+.font-icon-mobile-settings.font-icon-mobile-settings:not([data-font-options*="after"])::before,
+.font-icon-mobile-settings.font-icon-mobile-settings[data-font-options*="before"]::before,
+.font-icon-mobile-settings.font-icon-mobile-settings[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAAA' !important;
+}
+.font-icon-mobile-sms.font-icon-mobile-sms:not([data-font-options*="after"])::before,
+.font-icon-mobile-sms.font-icon-mobile-sms[data-font-options*="before"]::before,
+.font-icon-mobile-sms.font-icon-mobile-sms[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAAB' !important;
+}
+.font-icon-money-calculator.font-icon-money-calculator:not([data-font-options*="after"])::before,
+.font-icon-money-calculator.font-icon-money-calculator[data-font-options*="before"]::before,
+.font-icon-money-calculator.font-icon-money-calculator[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAAC' !important;
+}
+.font-icon-more.font-icon-more:not([data-font-options*="after"])::before,
+.font-icon-more.font-icon-more[data-font-options*="before"]::before,
+.font-icon-more.font-icon-more[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAAD' !important;
+}
+.font-icon-mortgage.font-icon-mortgage:not([data-font-options*="after"])::before,
+.font-icon-mortgage.font-icon-mortgage[data-font-options*="before"]::before,
+.font-icon-mortgage.font-icon-mortgage[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAAE' !important;
+}
+.font-icon-msic.font-icon-msic:not([data-font-options*="after"])::before,
+.font-icon-msic.font-icon-msic[data-font-options*="before"]::before,
+.font-icon-msic.font-icon-msic[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED45' !important;
+}
+.font-icon-nafcu.font-icon-nafcu:not([data-font-options*="after"])::before,
+.font-icon-nafcu.font-icon-nafcu[data-font-options*="before"]::before,
+.font-icon-nafcu.font-icon-nafcu[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED46' !important;
+}
+.font-icon-ncua.font-icon-ncua:not([data-font-options*="after"])::before,
+.font-icon-ncua.font-icon-ncua[data-font-options*="before"]::before,
+.font-icon-ncua.font-icon-ncua[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED4A' !important;
+}
+.font-icon-ncua-inverted.font-icon-ncua-inverted:not([data-font-options*="after"])::before,
+.font-icon-ncua-inverted.font-icon-ncua-inverted[data-font-options*="before"]::before,
+.font-icon-ncua-inverted.font-icon-ncua-inverted[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED47' !important;
+}
+.font-icon-ncua-large.font-icon-ncua-large:not([data-font-options*="after"])::before,
+.font-icon-ncua-large.font-icon-ncua-large[data-font-options*="before"]::before,
+.font-icon-ncua-large.font-icon-ncua-large[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED48' !important;
+}
+.font-icon-ncua-large-text.font-icon-ncua-large-text:not([data-font-options*="after"])::before,
+.font-icon-ncua-large-text.font-icon-ncua-large-text[data-font-options*="before"]::before,
+.font-icon-ncua-large-text.font-icon-ncua-large-text[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED48' !important;
+}
+.font-icon-ncua-simple.font-icon-ncua-simple:not([data-font-options*="after"])::before,
+.font-icon-ncua-simple.font-icon-ncua-simple[data-font-options*="before"]::before,
+.font-icon-ncua-simple.font-icon-ncua-simple[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED49' !important;
+}
+.font-icon-newspaper.font-icon-newspaper:not([data-font-options*="after"])::before,
+.font-icon-newspaper.font-icon-newspaper[data-font-options*="before"]::before,
+.font-icon-newspaper.font-icon-newspaper[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAB4' !important;
+}
+.font-icon-nmls.font-icon-nmls:not([data-font-options*="after"])::before,
+.font-icon-nmls.font-icon-nmls[data-font-options*="before"]::before,
+.font-icon-nmls.font-icon-nmls[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED4B' !important;
+}
+.font-icon-no-category.font-icon-no-category:not([data-font-options*="after"])::before,
+.font-icon-no-category.font-icon-no-category[data-font-options*="before"]::before,
+.font-icon-no-category.font-icon-no-category[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAB6' !important;
+}
+.font-icon-notification.font-icon-notification:not([data-font-options*="after"])::before,
+.font-icon-notification.font-icon-notification[data-font-options*="before"]::before,
+.font-icon-notification.font-icon-notification[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAB9' !important;
+}
+.font-icon-notification-solid.font-icon-notification-solid:not([data-font-options*="after"])::before,
+.font-icon-notification-solid.font-icon-notification-solid[data-font-options*="before"]::before,
+.font-icon-notification-solid.font-icon-notification-solid[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAB8' !important;
+}
+.font-icon-notifications.font-icon-notifications:not([data-font-options*="after"])::before,
+.font-icon-notifications.font-icon-notifications[data-font-options*="before"]::before,
+.font-icon-notifications.font-icon-notifications[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EABA' !important;
+}
+.font-icon-push-notifications.font-icon-push-notifications:not([data-font-options*="after"])::before,
+.font-icon-push-notifications.font-icon-push-notifications[data-font-options*="before"]::before,
+.font-icon-push-notifications.font-icon-push-notifications[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EABA' !important;
+}
+.font-icon-push-notification.font-icon-push-notification:not([data-font-options*="after"])::before,
+.font-icon-push-notification.font-icon-push-notification[data-font-options*="before"]::before,
+.font-icon-push-notification.font-icon-push-notification[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EABA' !important;
+}
+.font-icon-online-deposits.font-icon-online-deposits:not([data-font-options*="after"])::before,
+.font-icon-online-deposits.font-icon-online-deposits[data-font-options*="before"]::before,
+.font-icon-online-deposits.font-icon-online-deposits[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EABB' !important;
+}
+.font-icon-open-accounts.font-icon-open-accounts:not([data-font-options*="after"])::before,
+.font-icon-open-accounts.font-icon-open-accounts[data-font-options*="before"]::before,
+.font-icon-open-accounts.font-icon-open-accounts[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EABC' !important;
+}
+.font-icon-open-tab.font-icon-open-tab:not([data-font-options*="after"])::before,
+.font-icon-open-tab.font-icon-open-tab[data-font-options*="before"]::before,
+.font-icon-open-tab.font-icon-open-tab[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EABD' !important;
+}
+.font-icon-paste.font-icon-paste:not([data-font-options*="after"])::before,
+.font-icon-paste.font-icon-paste[data-font-options*="before"]::before,
+.font-icon-paste.font-icon-paste[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA1C' !important;
+}
+.font-icon-pay-people.font-icon-pay-people:not([data-font-options*="after"])::before,
+.font-icon-pay-people.font-icon-pay-people[data-font-options*="before"]::before,
+.font-icon-pay-people.font-icon-pay-people[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EABE' !important;
+}
+.font-icon-payroll-distribution.font-icon-payroll-distribution:not([data-font-options*="after"])::before,
+.font-icon-payroll-distribution.font-icon-payroll-distribution[data-font-options*="before"]::before,
+.font-icon-payroll-distribution.font-icon-payroll-distribution[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAC1' !important;
+}
+.font-icon-pdf.font-icon-pdf:not([data-font-options*="after"])::before,
+.font-icon-pdf.font-icon-pdf[data-font-options*="before"]::before,
+.font-icon-pdf.font-icon-pdf[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA05' !important;
+}
+.font-icon-pencil.font-icon-pencil:not([data-font-options*="after"])::before,
+.font-icon-pencil.font-icon-pencil[data-font-options*="before"]::before,
+.font-icon-pencil.font-icon-pencil[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAC2' !important;
+}
+.font-icon-pending.font-icon-pending:not([data-font-options*="after"])::before,
+.font-icon-pending.font-icon-pending[data-font-options*="before"]::before,
+.font-icon-pending.font-icon-pending[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAC4' !important;
+}
+.font-icon-i_pending.font-icon-i_pending:not([data-font-options*="after"])::before,
+.font-icon-i_pending.font-icon-i_pending[data-font-options*="before"]::before,
+.font-icon-i_pending.font-icon-i_pending[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAC4' !important;
+}
+.font-icon-paymentduesoon.font-icon-paymentduesoon:not([data-font-options*="after"])::before,
+.font-icon-paymentduesoon.font-icon-paymentduesoon[data-font-options*="before"]::before,
+.font-icon-paymentduesoon.font-icon-paymentduesoon[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAC4' !important;
+}
+.font-icon-pending-external-accounts.font-icon-pending-external-accounts:not([data-font-options*="after"])::before,
+.font-icon-pending-external-accounts.font-icon-pending-external-accounts[data-font-options*="before"]::before,
+.font-icon-pending-external-accounts.font-icon-pending-external-accounts[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAC3' !important;
+}
+.font-icon-pendingauth.font-icon-pendingauth:not([data-font-options*="after"])::before,
+.font-icon-pendingauth.font-icon-pendingauth[data-font-options*="before"]::before,
+.font-icon-pendingauth.font-icon-pendingauth[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAC5' !important;
+}
+.font-icon-percent-circle.font-icon-percent-circle:not([data-font-options*="after"])::before,
+.font-icon-percent-circle.font-icon-percent-circle[data-font-options*="before"]::before,
+.font-icon-percent-circle.font-icon-percent-circle[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAC6' !important;
+}
+.font-icon-personal-care.font-icon-personal-care:not([data-font-options*="after"])::before,
+.font-icon-personal-care.font-icon-personal-care[data-font-options*="before"]::before,
+.font-icon-personal-care.font-icon-personal-care[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAC8' !important;
+}
+.font-icon-pets.font-icon-pets:not([data-font-options*="after"])::before,
+.font-icon-pets.font-icon-pets[data-font-options*="before"]::before,
+.font-icon-pets.font-icon-pets[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAC9' !important;
+}
+.font-icon-phone.font-icon-phone:not([data-font-options*="after"])::before,
+.font-icon-phone.font-icon-phone[data-font-options*="before"]::before,
+.font-icon-phone.font-icon-phone[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EACB' !important;
+}
+.font-icon-contact.font-icon-contact:not([data-font-options*="after"])::before,
+.font-icon-contact.font-icon-contact[data-font-options*="before"]::before,
+.font-icon-contact.font-icon-contact[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EACB' !important;
+}
+.font-icon-phone-outgoing.font-icon-phone-outgoing:not([data-font-options*="after"])::before,
+.font-icon-phone-outgoing.font-icon-phone-outgoing[data-font-options*="before"]::before,
+.font-icon-phone-outgoing.font-icon-phone-outgoing[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EACA' !important;
+}
+.font-icon-phone2.font-icon-phone2:not([data-font-options*="after"])::before,
+.font-icon-phone2.font-icon-phone2[data-font-options*="before"]::before,
+.font-icon-phone2.font-icon-phone2[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EACC' !important;
+}
+.font-icon-piggy.font-icon-piggy:not([data-font-options*="after"])::before,
+.font-icon-piggy.font-icon-piggy[data-font-options*="before"]::before,
+.font-icon-piggy.font-icon-piggy[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EACD' !important;
+}
+.font-icon-pinterest.font-icon-pinterest:not([data-font-options*="after"])::before,
+.font-icon-pinterest.font-icon-pinterest[data-font-options*="before"]::before,
+.font-icon-pinterest.font-icon-pinterest[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED4C' !important;
+}
+.font-icon-pinterest-round.font-icon-pinterest-round:not([data-font-options*="after"])::before,
+.font-icon-pinterest-round.font-icon-pinterest-round[data-font-options*="before"]::before,
+.font-icon-pinterest-round.font-icon-pinterest-round[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED5D' !important;
+}
+.font-icon-pinterest-square.font-icon-pinterest-square:not([data-font-options*="after"])::before,
+.font-icon-pinterest-square.font-icon-pinterest-square[data-font-options*="before"]::before,
+.font-icon-pinterest-square.font-icon-pinterest-square[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED5E' !important;
+}
+.font-icon-positive-pay.font-icon-positive-pay:not([data-font-options*="after"])::before,
+.font-icon-positive-pay.font-icon-positive-pay[data-font-options*="before"]::before,
+.font-icon-positive-pay.font-icon-positive-pay[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EACF' !important;
+}
+.font-icon-power.font-icon-power:not([data-font-options*="after"])::before,
+.font-icon-power.font-icon-power[data-font-options*="before"]::before,
+.font-icon-power.font-icon-power[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAD0' !important;
+}
+.font-icon-print.font-icon-print:not([data-font-options*="after"])::before,
+.font-icon-print.font-icon-print[data-font-options*="before"]::before,
+.font-icon-print.font-icon-print[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAD1' !important;
+}
+.font-icon-quick-apply.font-icon-quick-apply:not([data-font-options*="after"])::before,
+.font-icon-quick-apply.font-icon-quick-apply[data-font-options*="before"]::before,
+.font-icon-quick-apply.font-icon-quick-apply[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAE3' !important;
+}
+.font-icon-quiz.font-icon-quiz:not([data-font-options*="after"])::before,
+.font-icon-quiz.font-icon-quiz[data-font-options*="before"]::before,
+.font-icon-quiz.font-icon-quiz[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAE4' !important;
+}
+.font-icon-rates.font-icon-rates:not([data-font-options*="after"])::before,
+.font-icon-rates.font-icon-rates[data-font-options*="before"]::before,
+.font-icon-rates.font-icon-rates[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAE5' !important;
+}
+.font-icon-receive-call.font-icon-receive-call:not([data-font-options*="after"])::before,
+.font-icon-receive-call.font-icon-receive-call[data-font-options*="before"]::before,
+.font-icon-receive-call.font-icon-receive-call[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAE6' !important;
+}
+.font-icon-receive-money.font-icon-receive-money:not([data-font-options*="after"])::before,
+.font-icon-receive-money.font-icon-receive-money[data-font-options*="before"]::before,
+.font-icon-receive-money.font-icon-receive-money[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED70' !important;
+}
+.font-icon-recurring.font-icon-recurring:not([data-font-options*="after"])::before,
+.font-icon-recurring.font-icon-recurring[data-font-options*="before"]::before,
+.font-icon-recurring.font-icon-recurring[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAE7' !important;
+}
+.font-icon-recurringtransfer.font-icon-recurringtransfer:not([data-font-options*="after"])::before,
+.font-icon-recurringtransfer.font-icon-recurringtransfer[data-font-options*="before"]::before,
+.font-icon-recurringtransfer.font-icon-recurringtransfer[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAE7' !important;
+}
+.font-icon-remote-deposit.font-icon-remote-deposit:not([data-font-options*="after"])::before,
+.font-icon-remote-deposit.font-icon-remote-deposit[data-font-options*="before"]::before,
+.font-icon-remote-deposit.font-icon-remote-deposit[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAEA' !important;
+}
+.font-icon-remote-deposit-mobile.font-icon-remote-deposit-mobile:not([data-font-options*="after"])::before,
+.font-icon-remote-deposit-mobile.font-icon-remote-deposit-mobile[data-font-options*="before"]::before,
+.font-icon-remote-deposit-mobile.font-icon-remote-deposit-mobile[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAEA' !important;
+}
+.font-icon-reply.font-icon-reply:not([data-font-options*="after"])::before,
+.font-icon-reply.font-icon-reply[data-font-options*="before"]::before,
+.font-icon-reply.font-icon-reply[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED7B' !important;
+}
+.font-icon-reports.font-icon-reports:not([data-font-options*="after"])::before,
+.font-icon-reports.font-icon-reports[data-font-options*="before"]::before,
+.font-icon-reports.font-icon-reports[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA06' !important;
+}
+.font-icon-retry.font-icon-retry:not([data-font-options*="after"])::before,
+.font-icon-retry.font-icon-retry[data-font-options*="before"]::before,
+.font-icon-retry.font-icon-retry[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAEB' !important;
+}
+.font-icon-revert.font-icon-revert:not([data-font-options*="after"])::before,
+.font-icon-revert.font-icon-revert[data-font-options*="before"]::before,
+.font-icon-revert.font-icon-revert[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED53' !important;
+}
+.font-icon-rewards.font-icon-rewards:not([data-font-options*="after"])::before,
+.font-icon-rewards.font-icon-rewards[data-font-options*="before"]::before,
+.font-icon-rewards.font-icon-rewards[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAEC' !important;
+}
+.font-icon-n-loyalty-checking.font-icon-n-loyalty-checking:not([data-font-options*="after"])::before,
+.font-icon-n-loyalty-checking.font-icon-n-loyalty-checking[data-font-options*="before"]::before,
+.font-icon-n-loyalty-checking.font-icon-n-loyalty-checking[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAEC' !important;
+}
+.font-icon-rss.font-icon-rss:not([data-font-options*="after"])::before,
+.font-icon-rss.font-icon-rss[data-font-options*="before"]::before,
+.font-icon-rss.font-icon-rss[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED64' !important;
+}
+.font-icon-sad-face.font-icon-sad-face:not([data-font-options*="after"])::before,
+.font-icon-sad-face.font-icon-sad-face[data-font-options*="before"]::before,
+.font-icon-sad-face.font-icon-sad-face[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC26' !important;
+}
+.font-icon-savvy-money.font-icon-savvy-money:not([data-font-options*="after"])::before,
+.font-icon-savvy-money.font-icon-savvy-money[data-font-options*="before"]::before,
+.font-icon-savvy-money.font-icon-savvy-money[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAED' !important;
+}
+.font-icon-search.font-icon-search:not([data-font-options*="after"])::before,
+.font-icon-search.font-icon-search[data-font-options*="before"]::before,
+.font-icon-search.font-icon-search[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAEE' !important;
+}
+.font-icon-section.font-icon-section:not([data-font-options*="after"])::before,
+.font-icon-section.font-icon-section[data-font-options*="before"]::before,
+.font-icon-section.font-icon-section[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAEF' !important;
+}
+.font-icon-security.font-icon-security:not([data-font-options*="after"])::before,
+.font-icon-security.font-icon-security[data-font-options*="before"]::before,
+.font-icon-security.font-icon-security[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAF1' !important;
+}
+.font-icon-security-chip.font-icon-security-chip:not([data-font-options*="after"])::before,
+.font-icon-security-chip.font-icon-security-chip[data-font-options*="before"]::before,
+.font-icon-security-chip.font-icon-security-chip[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAF0' !important;
+}
+.font-icon-send-money.font-icon-send-money:not([data-font-options*="after"])::before,
+.font-icon-send-money.font-icon-send-money[data-font-options*="before"]::before,
+.font-icon-send-money.font-icon-send-money[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAF2' !important;
+}
+.font-icon-settings.font-icon-settings:not([data-font-options*="after"])::before,
+.font-icon-settings.font-icon-settings[data-font-options*="before"]::before,
+.font-icon-settings.font-icon-settings[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAF4' !important;
+}
+.font-icon-settings-slider.font-icon-settings-slider:not([data-font-options*="after"])::before,
+.font-icon-settings-slider.font-icon-settings-slider[data-font-options*="before"]::before,
+.font-icon-settings-slider.font-icon-settings-slider[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAF3' !important;
+}
+.font-icon-shared.font-icon-shared:not([data-font-options*="after"])::before,
+.font-icon-shared.font-icon-shared[data-font-options*="before"]::before,
+.font-icon-shared.font-icon-shared[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAF5' !important;
+}
+.font-icon-shopping.font-icon-shopping:not([data-font-options*="after"])::before,
+.font-icon-shopping.font-icon-shopping[data-font-options*="before"]::before,
+.font-icon-shopping.font-icon-shopping[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAF6' !important;
+}
+.font-icon-show.font-icon-show:not([data-font-options*="after"])::before,
+.font-icon-show.font-icon-show[data-font-options*="before"]::before,
+.font-icon-show.font-icon-show[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAF7' !important;
+}
+.font-icon-skip.font-icon-skip:not([data-font-options*="after"])::before,
+.font-icon-skip.font-icon-skip[data-font-options*="before"]::before,
+.font-icon-skip.font-icon-skip[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED7C' !important;
+}
+.font-icon-skip-a-pay.font-icon-skip-a-pay:not([data-font-options*="after"])::before,
+.font-icon-skip-a-pay.font-icon-skip-a-pay[data-font-options*="before"]::before,
+.font-icon-skip-a-pay.font-icon-skip-a-pay[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAF8' !important;
+}
+.font-icon-split.font-icon-split:not([data-font-options*="after"])::before,
+.font-icon-split.font-icon-split[data-font-options*="before"]::before,
+.font-icon-split.font-icon-split[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAF9' !important;
+}
+.font-icon-star-filled.font-icon-star-filled:not([data-font-options*="after"])::before,
+.font-icon-star-filled.font-icon-star-filled[data-font-options*="before"]::before,
+.font-icon-star-filled.font-icon-star-filled[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAFA' !important;
+}
+.font-icon-star-line.font-icon-star-line:not([data-font-options*="after"])::before,
+.font-icon-star-line.font-icon-star-line[data-font-options*="before"]::before,
+.font-icon-star-line.font-icon-star-line[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAFB' !important;
+}
+.font-icon-success.font-icon-success:not([data-font-options*="after"])::before,
+.font-icon-success.font-icon-success[data-font-options*="before"]::before,
+.font-icon-success.font-icon-success[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAFC' !important;
+}
+.font-icon-checkmark-circle.font-icon-checkmark-circle:not([data-font-options*="after"])::before,
+.font-icon-checkmark-circle.font-icon-checkmark-circle[data-font-options*="before"]::before,
+.font-icon-checkmark-circle.font-icon-checkmark-circle[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAFC' !important;
+}
+.font-icon-circle-check-line.font-icon-circle-check-line:not([data-font-options*="after"])::before,
+.font-icon-circle-check-line.font-icon-circle-check-line[data-font-options*="before"]::before,
+.font-icon-circle-check-line.font-icon-circle-check-line[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAFC' !important;
+}
+.font-icon-circle-check-filled.font-icon-circle-check-filled:not([data-font-options*="after"])::before,
+.font-icon-circle-check-filled.font-icon-circle-check-filled[data-font-options*="before"]::before,
+.font-icon-circle-check-filled.font-icon-circle-check-filled[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAFC' !important;
+}
+.font-icon-sweeps.font-icon-sweeps:not([data-font-options*="after"])::before,
+.font-icon-sweeps.font-icon-sweeps[data-font-options*="before"]::before,
+.font-icon-sweeps.font-icon-sweeps[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAFE' !important;
+}
+.font-icon-sync.font-icon-sync:not([data-font-options*="after"])::before,
+.font-icon-sync.font-icon-sync[data-font-options*="before"]::before,
+.font-icon-sync.font-icon-sync[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EAFF' !important;
+}
+.font-icon-tablet.font-icon-tablet:not([data-font-options*="after"])::before,
+.font-icon-tablet.font-icon-tablet[data-font-options*="before"]::before,
+.font-icon-tablet.font-icon-tablet[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED72' !important;
+}
+.font-icon-tag.font-icon-tag:not([data-font-options*="after"])::before,
+.font-icon-tag.font-icon-tag[data-font-options*="before"]::before,
+.font-icon-tag.font-icon-tag[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB00' !important;
+}
+.font-icon-taxes.font-icon-taxes:not([data-font-options*="after"])::before,
+.font-icon-taxes.font-icon-taxes[data-font-options*="before"]::before,
+.font-icon-taxes.font-icon-taxes[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB01' !important;
+}
+.font-icon-thumbs-down.font-icon-thumbs-down:not([data-font-options*="after"])::before,
+.font-icon-thumbs-down.font-icon-thumbs-down[data-font-options*="before"]::before,
+.font-icon-thumbs-down.font-icon-thumbs-down[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA29' !important;
+}
+.font-icon-thumbs-up.font-icon-thumbs-up:not([data-font-options*="after"])::before,
+.font-icon-thumbs-up.font-icon-thumbs-up[data-font-options*="before"]::before,
+.font-icon-thumbs-up.font-icon-thumbs-up[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA2F' !important;
+}
+.font-icon-tiktok.font-icon-tiktok:not([data-font-options*="after"])::before,
+.font-icon-tiktok.font-icon-tiktok[data-font-options*="before"]::before,
+.font-icon-tiktok.font-icon-tiktok[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA08' !important;
+}
+.font-icon-touch-id.font-icon-touch-id:not([data-font-options*="after"])::before,
+.font-icon-touch-id.font-icon-touch-id[data-font-options*="before"]::before,
+.font-icon-touch-id.font-icon-touch-id[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED4D' !important;
+}
+.font-icon-touchid.font-icon-touchid:not([data-font-options*="after"])::before,
+.font-icon-touchid.font-icon-touchid[data-font-options*="before"]::before,
+.font-icon-touchid.font-icon-touchid[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED4D' !important;
+}
+.font-icon-transfer.font-icon-transfer:not([data-font-options*="after"])::before,
+.font-icon-transfer.font-icon-transfer[data-font-options*="before"]::before,
+.font-icon-transfer.font-icon-transfer[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB05' !important;
+}
+.font-icon-transfers.font-icon-transfers:not([data-font-options*="after"])::before,
+.font-icon-transfers.font-icon-transfers[data-font-options*="before"]::before,
+.font-icon-transfers.font-icon-transfers[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB05' !important;
+}
+.font-icon-transport.font-icon-transport:not([data-font-options*="after"])::before,
+.font-icon-transport.font-icon-transport[data-font-options*="before"]::before,
+.font-icon-transport.font-icon-transport[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB07' !important;
+}
+.font-icon-trashcan.font-icon-trashcan:not([data-font-options*="after"])::before,
+.font-icon-trashcan.font-icon-trashcan[data-font-options*="before"]::before,
+.font-icon-trashcan.font-icon-trashcan[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB08' !important;
+}
+.font-icon-travel.font-icon-travel:not([data-font-options*="after"])::before,
+.font-icon-travel.font-icon-travel[data-font-options*="before"]::before,
+.font-icon-travel.font-icon-travel[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB09' !important;
+}
+.font-icon-trend-up.font-icon-trend-up:not([data-font-options*="after"])::before,
+.font-icon-trend-up.font-icon-trend-up[data-font-options*="before"]::before,
+.font-icon-trend-up.font-icon-trend-up[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB0A' !important;
+}
+.font-icon-trophy.font-icon-trophy:not([data-font-options*="after"])::before,
+.font-icon-trophy.font-icon-trophy[data-font-options*="before"]::before,
+.font-icon-trophy.font-icon-trophy[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC27' !important;
+}
+.font-icon-unlock.font-icon-unlock:not([data-font-options*="after"])::before,
+.font-icon-unlock.font-icon-unlock[data-font-options*="before"]::before,
+.font-icon-unlock.font-icon-unlock[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC1C' !important;
+}
+.font-icon-upload.font-icon-upload:not([data-font-options*="after"])::before,
+.font-icon-upload.font-icon-upload[data-font-options*="before"]::before,
+.font-icon-upload.font-icon-upload[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EA03' !important;
+}
+.font-icon-user.font-icon-user:not([data-font-options*="after"])::before,
+.font-icon-user.font-icon-user[data-font-options*="before"]::before,
+.font-icon-user.font-icon-user[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB0F' !important;
+}
+.font-icon-person.font-icon-person:not([data-font-options*="after"])::before,
+.font-icon-person.font-icon-person[data-font-options*="before"]::before,
+.font-icon-person.font-icon-person[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB0F' !important;
+}
+.font-icon-profile.font-icon-profile:not([data-font-options*="after"])::before,
+.font-icon-profile.font-icon-profile[data-font-options*="before"]::before,
+.font-icon-profile.font-icon-profile[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB0F' !important;
+}
+.font-icon-user-locked.font-icon-user-locked:not([data-font-options*="after"])::before,
+.font-icon-user-locked.font-icon-user-locked[data-font-options*="before"]::before,
+.font-icon-user-locked.font-icon-user-locked[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB0E' !important;
+}
+.font-icon-verified-by-visa.font-icon-verified-by-visa:not([data-font-options*="after"])::before,
+.font-icon-verified-by-visa.font-icon-verified-by-visa[data-font-options*="before"]::before,
+.font-icon-verified-by-visa.font-icon-verified-by-visa[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED5F' !important;
+}
+.font-icon-video-chat.font-icon-video-chat:not([data-font-options*="after"])::before,
+.font-icon-video-chat.font-icon-video-chat[data-font-options*="before"]::before,
+.font-icon-video-chat.font-icon-video-chat[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED65' !important;
+}
+.font-icon-view-fullsite.font-icon-view-fullsite:not([data-font-options*="after"])::before,
+.font-icon-view-fullsite.font-icon-view-fullsite[data-font-options*="before"]::before,
+.font-icon-view-fullsite.font-icon-view-fullsite[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB10' !important;
+}
+.font-icon-warning.font-icon-warning:not([data-font-options*="after"])::before,
+.font-icon-warning.font-icon-warning[data-font-options*="before"]::before,
+.font-icon-warning.font-icon-warning[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB11' !important;
+}
+.font-icon-wellness.font-icon-wellness:not([data-font-options*="after"])::before,
+.font-icon-wellness.font-icon-wellness[data-font-options*="before"]::before,
+.font-icon-wellness.font-icon-wellness[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED7D' !important;
+}
+.font-icon-wire-transfers.font-icon-wire-transfers:not([data-font-options*="after"])::before,
+.font-icon-wire-transfers.font-icon-wire-transfers[data-font-options*="before"]::before,
+.font-icon-wire-transfers.font-icon-wire-transfers[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EB12' !important;
+}
+.font-icon-x-social.font-icon-x-social:not([data-font-options*="after"])::before,
+.font-icon-x-social.font-icon-x-social[data-font-options*="before"]::before,
+.font-icon-x-social.font-icon-x-social[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC1A' !important;
+}
+.font-icon-twitter.font-icon-twitter:not([data-font-options*="after"])::before,
+.font-icon-twitter.font-icon-twitter[data-font-options*="before"]::before,
+.font-icon-twitter.font-icon-twitter[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC1A' !important;
+}
+.font-icon-twitter-small.font-icon-twitter-small:not([data-font-options*="after"])::before,
+.font-icon-twitter-small.font-icon-twitter-small[data-font-options*="before"]::before,
+.font-icon-twitter-small.font-icon-twitter-small[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC1A' !important;
+}
+.font-icon-x.font-icon-x:not([data-font-options*="after"])::before,
+.font-icon-x.font-icon-x[data-font-options*="before"]::before,
+.font-icon-x.font-icon-x[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC1A' !important;
+}
+.font-icon-x-brand.font-icon-x-brand:not([data-font-options*="after"])::before,
+.font-icon-x-brand.font-icon-x-brand[data-font-options*="before"]::before,
+.font-icon-x-brand.font-icon-x-brand[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\EC1A' !important;
+}
+.font-icon-youtube.font-icon-youtube:not([data-font-options*="after"])::before,
+.font-icon-youtube.font-icon-youtube[data-font-options*="before"]::before,
+.font-icon-youtube.font-icon-youtube[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED50' !important;
+}
+.font-icon-youtube-alt.font-icon-youtube-alt:not([data-font-options*="after"])::before,
+.font-icon-youtube-alt.font-icon-youtube-alt[data-font-options*="before"]::before,
+.font-icon-youtube-alt.font-icon-youtube-alt[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED4F' !important;
+}
+.font-icon-youtube-round.font-icon-youtube-round:not([data-font-options*="after"])::before,
+.font-icon-youtube-round.font-icon-youtube-round[data-font-options*="before"]::before,
+.font-icon-youtube-round.font-icon-youtube-round[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED60' !important;
+}
+.font-icon-youtube-square.font-icon-youtube-square:not([data-font-options*="after"])::before,
+.font-icon-youtube-square.font-icon-youtube-square[data-font-options*="before"]::before,
+.font-icon-youtube-square.font-icon-youtube-square[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED61' !important;
+}
+.font-icon-zelle.font-icon-zelle:not([data-font-options*="after"])::before,
+.font-icon-zelle.font-icon-zelle[data-font-options*="before"]::before,
+.font-icon-zelle.font-icon-zelle[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED51' !important;
+}
+.font-icon-zoom-in.font-icon-zoom-in:not([data-font-options*="after"])::before,
+.font-icon-zoom-in.font-icon-zoom-in[data-font-options*="before"]::before,
+.font-icon-zoom-in.font-icon-zoom-in[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED54' !important;
+}
+.font-icon-zoom-out.font-icon-zoom-out:not([data-font-options*="after"])::before,
+.font-icon-zoom-out.font-icon-zoom-out[data-font-options*="before"]::before,
+.font-icon-zoom-out.font-icon-zoom-out[data-font-options*="after"]::after {
+	font-family: 'Alkami' !important;
+	content:'\ED55' !important;
+}
+
+.i-Acculynk.i-Acculynk::before { font-family: 'Alkami' !important; content: '\EABE' !important; }
+.i-ACHPayments.i-ACHPayments::before { font-family: 'Alkami' !important; content: '\EA0E' !important; }
+.i-atm.i-atm::before { font-family: 'Alkami' !important; content: '\EA1D' !important; }
+.i-Azigio.i-Azigio::before { font-family: 'Alkami' !important; content: '\EAEC' !important; }
+.i-BackToClassic.i-BackToClassic::before { font-family: 'Alkami' !important; content: '\EA19' !important; }
+.i-Benefits.i-Benefits::before { font-family: 'Alkami' !important; content: '\EAEC' !important; }
+.i-BillPay.i-BillPay::before { font-family: 'Alkami' !important; content: '\EA20' !important; }
+.i-BillPayV2.i-BillPayV2::before { font-family: 'Alkami' !important; content: '\EA20' !important; }
+.i-Budgets.i-Budgets::before { font-family: 'Alkami' !important; content: '\EA24' !important; }
+.i-CardManagement.i-CardManagement::before { font-family: 'Alkami' !important; content: '\EAA5' !important; }
+.i-CardRewards.i-CardRewards::before { font-family: 'Alkami' !important; content: '\EAEC' !important; }
+.i-CardWorks.i-CardWorks::before { font-family: 'Alkami' !important; content: '\EA32' !important; }
+.i-CashEdge.i-CashEdge::before { font-family: 'Alkami' !important; content: '\EA36' !important; }
+.i-CheckFreeBillPay.i-CheckFreeBillPay::before { font-family: 'Alkami' !important; content: '\EA20' !important; }
+.i-contact.i-contact::before { font-family: 'Alkami' !important; content: '\EACB' !important; }
+.i-Contact.i-Contact::before { font-family: 'Alkami' !important; content: '\EACB' !important; }
+.i-CourtesyPay.i-CourtesyPay::before { font-family: 'Alkami' !important; content: '\EA4D' !important; }
+.i-CreditCardWidget.i-CreditCardWidget::before { font-family: 'Alkami' !important; content: '\EAEC' !important; }
+.i-CunexusLoanEngine.i-CunexusLoanEngine::before { font-family: 'Alkami' !important; content: '\EA18' !important; }
+.i-Dashboard.i-Dashboard::before { font-family: 'Alkami' !important; content: '\EA52' !important; }
+.i-DashboardV2.i-DashboardV2::before { font-family: 'Alkami' !important; content: '\EA52' !important; }
+.i-DraftServices.i-DraftServices::before { font-family: 'Alkami' !important; content: '\EA3B' !important; }
+.i-eDocs.i-eDocs::before { font-family: 'Alkami' !important; content: '\EA63' !important; }
+.i-facebook-small.i-facebook-small::before { font-family: 'Alkami' !important; content: '\ED3F' !important; }
+.i-FirstTechP2P.i-FirstTechP2P::before { font-family: 'Alkami' !important; content: '\EAF2' !important; font-size: 22px; }
+.i-Fissso.i-Fissso::before { font-family: 'Alkami' !important; content: '\EA20' !important; }
+.i-FuegoCardManagement.i-FuegoCardManagement::before { font-family: 'Alkami' !important; content: '\EAA5' !important; }
+.i-FuegoLoan.i-FuegoLoan::before { font-family: 'Alkami' !important; content: '\EA4D' !important; }
+.i-full-site.i-full-site::before { font-family: 'Alkami' !important; content: '\EA7C' !important; }
+.i-FullSite.i-FullSite::before { font-family: 'Alkami' !important; content: '\EB10' !important; }
+.i-GenericUrlLaunch.i-GenericUrlLaunch::before { font-family: 'Alkami' !important; content: '\EA7B' !important; }
+.i-globe.i-globe::before { font-family: 'Alkami' !important; content: '\EA84' !important; }
+.i-Globe.i-Globe::before { font-family: 'Alkami' !important; content: '\EA84' !important; }
+.i-house.i-house::before { font-family: 'Alkami' !important; content: '\EA8C' !important; }
+.i-House.i-House::before { font-family: 'Alkami' !important; content: '\EA8C' !important; }
+.i-info.i-info::before { font-family: 'Alkami' !important; content: '\EA90' !important; }
+.i-infogeneric.i-infogeneric::before { font-family: 'Alkami' !important; content: '\EA90' !important; }
+.i-instagram.i-instagram::before { font-family: 'Alkami' !important; content: '\ED41' !important; }
+.i-IPay.i-IPay::before { font-family: 'Alkami' !important; content: '\EA20' !important; }
+.i-KaneSecureForms.i-KaneSecureForms::before { font-family: 'Alkami' !important; content: '\EA7B' !important; }
+.i-KctRewards.i-KctRewards::before { font-family: 'Alkami' !important; content: '\EAEC' !important; }
+.i-LGECheckingRewards.i-LGECheckingRewards::before { font-family: 'Alkami' !important; content: '\EA37' !important; }
+.i-linkedin.i-linkedin::before { font-family: 'Alkami' !important; content: '\ED42' !important; }
+.i-live-chat.i-live-chat::before { font-family: 'Alkami' !important; content: '\EA3A' !important; }
+.i-locations.i-locations::before { font-family: 'Alkami' !important; content: '\ED43' !important; }
+.i-Locations.i-Locations::before { font-family: 'Alkami' !important; content: '\ED43' !important; }
+.i-Logout.i-Logout::before { font-family: 'Alkami' !important; content: '\EAA3' !important; }
+.i-LogOut.i-LogOut::before { font-family: 'Alkami' !important; content: '\EAA3' !important; }
+.i-MasterCardRewards.i-MasterCardRewards::before { font-family: 'Alkami' !important; content: '\EAEC' !important; }
+.i-MessageCenter.i-MessageCenter::before { font-family: 'Alkami' !important; content: '\EA6B' !important; }
+.i-MFCURewardsWidget.i-MFCURewardsWidget::before { font-family: 'Alkami' !important; content: '\EA37' !important; }
+.i-MoveMoney.i-MoveMoney::before { font-family: 'Alkami' !important; content: '\EABE' !important; }
+.i-MyAccounts.i-MyAccounts::before { font-family: 'Alkami' !important; content: '\EA0C' !important; }
+.i-MyAccountsV2.i-MyAccountsV2::before { font-family: 'Alkami' !important; content: '\EA0C' !important; }
+.i-oFlows.i-oFlows::before { font-family: 'Alkami' !important; content: '\EA7B' !important; }
+.i-OpenAccountWidget.i-OpenAccountWidget::before { font-family: 'Alkami' !important; content: '\EABD' !important; }
+.i-OracleKnowledgeBase.i-OracleKnowledgeBase::before { font-family: 'Alkami' !important; content: '\EAEE' !important; }
+.i-PatelcoOpenAccount.i-PatelcoOpenAccount::before { font-family: 'Alkami' !important; content: '\EABD' !important; }
+.i-pinterest.i-pinterest::before { font-family: 'Alkami' !important; content: '\ED4C' !important; }
+.i-Policy.i-Policy::before { font-family: 'Alkami' !important; content: '\EA90' !important; }
+.i-PositivePayACHAlert.i-PositivePayACHAlert::before { font-family: 'Alkami' !important; content: '\EACF' !important; }
+.i-PscuBillPay.i-PscuBillPay::before { font-family: 'Alkami' !important; content: '\EA20' !important; }
+.i-QuickApply.i-QuickApply::before { font-family: 'Alkami' !important; content: '\EAE3' !important; }
+.i-QuickApps.i-QuickApps::before { font-family: 'Alkami' !important; content: '\EAE3' !important; }
+.i-rates.i-rates::before { font-family: 'Alkami' !important; content: '\EAE5' !important; }
+.i-RemoteDeposit.i-RemoteDeposit::before { font-family: 'Alkami' !important; content: '\EAEA' !important; }
+.i-RewardsWidget.i-RewardsWidget::before { font-family: 'Alkami' !important; content: '\EA37' !important; }
+.i-SavingsGoals.i-SavingsGoals::before { font-family: 'Alkami' !important; content: '\EACD' !important; }
+.i-SavvyMoney.i-SavvyMoney::before { font-family: 'Alkami' !important; content: '\EAED' !important; }
+.i-Settings.i-Settings::before { font-family: 'Alkami' !important; content: '\EAF4' !important; }
+.i-skip_a_pay.i-skip_a_pay::before { font-family: 'Alkami' !important; content: '\EAF8' !important; }
+.i-SkipAPay.i-SkipAPay::before { font-family: 'Alkami' !important; content: '\EAF8' !important; }
+.i-support.i-support::before { font-family: 'Alkami' !important; content: '\EA88' !important; }
+.i-Support.i-Support::before { font-family: 'Alkami' !important; content: '\EA88' !important; }
+.i-Sweeps.i-Sweeps::before { font-family: 'Alkami' !important; content: '\EAFE' !important; }
+.i-Transfer.i-Transfer::before { font-family: 'Alkami' !important; content: '\EB05' !important; }
+.i-TransferV2.i-TransferV2::before { font-family: 'Alkami' !important; content: '\EB05' !important; }
+.i-twitter-small.i-twitter-small::before { font-family: 'Alkami' !important; content: '\EC1A' !important; }
+.i-youtube.i-youtube::before { font-family: 'Alkami' !important; content: '\ED50' !important; }

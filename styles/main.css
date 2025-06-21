@@ -1,0 +1,230 @@
+/* FirstTechFed UX Fixer - Main Stylesheet */
+
+/* CSS Custom Properties */
+:root {
+  /* Color System */
+  --ux-fixer-primary: #007bff;
+  --ux-fixer-primary-dark: #0056b3;
+  --ux-fixer-success: #28a745;
+  --ux-fixer-warning: #ffc107;
+  --ux-fixer-danger: #dc3545;
+  --ux-fixer-info: #17a2b8;
+  
+  /* Neutral Colors */
+  --ux-fixer-white: #ffffff;
+  --ux-fixer-gray-50: #f8f9fa;
+  --ux-fixer-gray-100: #f8f9fa;
+  --ux-fixer-gray-200: #e9ecef;
+  --ux-fixer-gray-300: #dee2e6;
+  --ux-fixer-gray-400: #ced4da;
+  --ux-fixer-gray-500: #adb5bd;
+  --ux-fixer-gray-600: #6c757d;
+  --ux-fixer-gray-700: #495057;
+  --ux-fixer-gray-800: #343a40;
+  --ux-fixer-gray-900: #212529;
+  
+  /* Typography */
+  --ux-fixer-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --ux-fixer-font-family-mono: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+  --ux-fixer-font-size-xs: 0.75rem;
+  --ux-fixer-font-size-sm: 0.875rem;
+  --ux-fixer-font-size-base: 1rem;
+  --ux-fixer-font-size-lg: 1.125rem;
+  --ux-fixer-font-size-xl: 1.25rem;
+  --ux-fixer-line-height-tight: 1.25;
+  --ux-fixer-line-height-normal: 1.4;
+  --ux-fixer-line-height-relaxed: 1.6;
+  
+  /* Spacing */
+  --ux-fixer-spacing-0: 0;
+  --ux-fixer-spacing-1: 0.125rem;
+  --ux-fixer-spacing-2: 0.25rem;
+  --ux-fixer-spacing-3: 0.5rem;
+  --ux-fixer-spacing-4: 0.75rem;
+  --ux-fixer-spacing-5: 1rem;
+  --ux-fixer-spacing-6: 1.5rem;
+  --ux-fixer-spacing-8: 2rem;
+  
+  /* Borders */
+  --ux-fixer-border-width: 1px;
+  --ux-fixer-border-radius: 4px;
+  --ux-fixer-border-radius-sm: 2px;
+  --ux-fixer-border-radius-lg: 8px;
+  
+  /* Shadows */
+  --ux-fixer-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ux-fixer-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --ux-fixer-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  /* Transitions */
+  --ux-fixer-transition-fast: 150ms ease-in-out;
+  --ux-fixer-transition-normal: 250ms ease-in-out;
+  --ux-fixer-transition-slow: 350ms ease-in-out;
+}
+
+/* Global Reset and Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ux-fixer-font-family);
+  font-size: var(--ux-fixer-font-size-sm);
+  line-height: var(--ux-fixer-line-height-normal);
+  color: var(--ux-fixer-gray-900);
+  background-color: var(--ux-fixer-white);
+  margin: 0;
+  padding: 0;
+}
+
+/* FirstTechFed Specific Overrides */
+body, html {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+}
+
+/* Remove excessive padding and margins */
+.container, .container-fluid, .row, .col, .col-* {
+  padding: var(--ux-fixer-spacing-2) !important;
+  margin: var(--ux-fixer-spacing-1) !important;
+}
+
+/* Dense layout overrides */
+.card, .panel, .well, .jumbotron {
+  padding: var(--ux-fixer-spacing-3) !important;
+  margin-bottom: var(--ux-fixer-spacing-3) !important;
+  border-radius: var(--ux-fixer-border-radius) !important;
+}
+
+/* Remove shadows and excessive styling */
+.card, .panel, .well, .jumbotron {
+  box-shadow: var(--ux-fixer-shadow-sm) !important;
+  border: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-200) !important;
+}
+
+/* Utility Classes */
+.ux-fixer-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.ux-fixer-focus-visible {
+  outline: 2px solid var(--ux-fixer-primary);
+  outline-offset: 2px;
+}
+
+.ux-fixer-dense-layout {
+  padding: var(--ux-fixer-spacing-3) !important;
+  margin: var(--ux-fixer-spacing-2) !important;
+}
+
+.ux-fixer-error {
+  color: var(--ux-fixer-danger);
+  font-size: var(--ux-fixer-font-size-xs);
+  margin-top: var(--ux-fixer-spacing-1);
+}
+
+.ux-fixer-error-input {
+  border-color: var(--ux-fixer-danger) !important;
+}
+
+/* Hide elements that should be removed */
+.hamburger, .menu-toggle, .navbar-toggler, .mobile-menu-toggle {
+  display: none !important;
+}
+
+/* Force inline display for navigation */
+.navbar-nav, .nav-menu, .menu-items {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: var(--ux-fixer-spacing-3) !important;
+  align-items: center !important;
+}
+
+/* Remove dropdown arrows */
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Force dropdowns to be visible */
+.dropdown-menu, .dropdown-content {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: var(--ux-fixer-spacing-2) !important;
+  position: static !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Dense table styling */
+table, .table {
+  font-size: var(--ux-fixer-font-size-sm) !important;
+  font-family: var(--ux-fixer-font-family-mono) !important;
+}
+
+table th, table td, .table th, .table td {
+  padding: var(--ux-fixer-spacing-2) !important;
+  border-bottom: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-200) !important;
+}
+
+/* Remove excessive button styling */
+.btn, .button {
+  padding: var(--ux-fixer-spacing-2) var(--ux-fixer-spacing-4) !important;
+  font-size: var(--ux-fixer-font-size-sm) !important;
+  border-radius: var(--ux-fixer-border-radius) !important;
+  border: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-300) !important;
+  background: var(--ux-fixer-white) !important;
+  color: var(--ux-fixer-gray-700) !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+}
+
+.btn:hover, .button:hover {
+  background: var(--ux-fixer-gray-100) !important;
+  border-color: var(--ux-fixer-gray-400) !important;
+}
+
+/* Primary button styling */
+.btn-primary, .button-primary {
+  background: var(--ux-fixer-primary) !important;
+  color: var(--ux-fixer-white) !important;
+  border-color: var(--ux-fixer-primary) !important;
+}
+
+.btn-primary:hover, .button-primary:hover {
+  background: var(--ux-fixer-primary-dark) !important;
+  border-color: var(--ux-fixer-primary-dark) !important;
+}
+
+/* Remove modal overlays */
+.modal-backdrop, .overlay, .popup-overlay {
+  display: none !important;
+}
+
+/* Force modals to be inline */
+.modal, .popup, .dialog {
+  position: static !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  background: var(--ux-fixer-white) !important;
+  border: var(--ux-fixer-border-width) solid var(--ux-fixer-gray-200) !important;
+  border-radius: var(--ux-fixer-border-radius) !important;
+  margin: var(--ux-fixer-spacing-3) 0 !important;
+}
+
+/* Remove close buttons from modals */
+.modal .close, .popup .close, .dialog .close {
+  display: none !important;
+} 

@@ -1,0 +1,5 @@
+!(function(){let h='https://assets.orb.alkamitech.com/production',nm='resolvedCsCdn',r=(r)=>{let n=document.createElement('script');for(let s in((n.src=`${h.replace('/production', '').replace('/staging', '')}${r.value.basePath}/${r.value.files[0]}`),(n.type='application/javascript')))
+localStorage.setItem(nm,JSON.stringify(r)),document.body.appendChild(n);};if(localStorage.getItem(nm)){if(JSON.parse(localStorage.getItem(nm)).expires<Date.now()){localStorage.removeItem(nm);}
+else{r(JSON.parse(localStorage.getItem(nm)));return;}}
+fetch(`${h}/cdn-package-labels/alkami.cdn.fragment.clickstream/1.json`).then((rs)=>{if(!rs.ok)
+throw Error(`Unable to resolve CDN fragment. Status: ${rs.status}`);return rs.json();}).then((d)=>{c={expires:Date.now()+(1000*60*60*24),value:d};r(c);}).catch((ex)=>{console.error('Unable to register this fragment:',ex);});})();

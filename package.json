@@ -1,0 +1,47 @@
+{
+  "name": "ux-fixer-firsttechfed",
+  "version": "1.0.0",
+  "description": "Firefox extension to transform FirstTechFed's interface into a dense, efficient, text-based design",
+  "main": "content-scripts/main.js",
+  "scripts": {
+    "build": "web-ext build",
+    "run": "web-ext run",
+    "lint": "web-ext lint",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:integration": "jest --testPathPattern=integration",
+    "test:a11y": "jest --testPathPattern=accessibility",
+    "validate:manifest": "web-ext lint --warnings-as-errors",
+    "dev": "web-ext run --firefox=firefox-developer-edition",
+    "package": "web-ext build --overwrite-dest",
+    "sign": "web-ext sign --api-key=$FIREFOX_ADDONS_API_KEY --api-secret=$FIREFOX_ADDONS_API_SECRET"
+  },
+  "keywords": [
+    "firefox-extension",
+    "ux",
+    "banking",
+    "firsttechfed",
+    "accessibility"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "web-ext": "^7.8.0",
+    "jest": "^29.7.0",
+    "puppeteer": "^21.6.1",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sbrokaw/ux-fixer-firsttechfed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sbrokaw/ux-fixer-firsttechfed/issues"
+  },
+  "homepage": "https://github.com/sbrokaw/ux-fixer-firsttechfed#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

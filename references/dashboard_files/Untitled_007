@@ -1,0 +1,40 @@
+
+let rscs = (nr) => {
+    try {
+        if (typeof(cdApi) === 'undefined') {
+            return nr > 0;
+        }
+        let cc = window.location.pathname.replace(/^\/+/, '').replaceAll('/', '_').toUpperCase();
+        cdApi.changeContext(cc);
+        if (cc === 'LOGOUT') {
+            cdApi.startNewSession();
+            return false;
+        }
+        let csid = Global_PersistentSessionIdentifier;
+        if (!csid) {
+            return nr > 0;
+        }
+        cdApi.setCustomerSessionId(csid);
+        return false;
+    } catch (e) {
+        return nr > 0;
+    }
+}
+let ls = (nr) => {
+    let jsr = document.createElement('script');
+    jsr.type = 'text/javascript';
+    jsr.src = 'https://bcdn.firsttechfed.com/scripts/1e027846/1e027846.js';
+    if (jsr.readyState) {
+        jsr.onreadystatechange = () => {
+            if (jsr.readyState === 'loaded' || jsr.readyState === 'complete')
+                jsr.onreadystatechange = null;
+        };
+    } else {
+        jsr.onload = () => {
+            if (rscs(nr))
+                setTimeout(ls(--nr), 500);
+        };
+    }
+    document.getElementsByTagName('head')[0].appendChild(jsr);
+}
+document.addEventListener('DOMContentLoaded', ls(6), false);

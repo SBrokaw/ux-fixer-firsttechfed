@@ -1,0 +1,206 @@
+﻿/*------------------------------------------------------------------
+ *
+ * Generic Styling
+ *
+ */
+
+body {
+}
+
+
+#policies-summary {
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+
+#module_policies ul.policies li {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    margin: 0px 0px 12px 0px;
+}
+
+    #module_policies ul.policies li.selected {
+        background-color: #f5f5f5;
+    }
+
+    #module_policies ul.policies li a:hover:after {
+        background-position: 2px -17px;
+    }
+
+    #module_policies ul.policies li a.policy-link, a.policy-link:visited, a.policy-link:hover, a.policy-link:active {
+        color: inherit;
+    }
+
+    #module_policies ul.policies li a.policy-link {
+        display: block;
+        padding: 15px 8px 15px 8px;
+        position: relative;
+        text-decoration: none;
+    }
+
+        #module_policies ul.policies li a.policy-link div.policy-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+            #module_policies ul.policies li a.policy-link div.policy-info img.policy-image {
+                flex-direction: row;
+                margin-right: auto;
+            }
+
+            #module_policies ul.policies li a.policy-link div.policy-info div.policy-type-number {
+                flex-direction: column;
+                margin-right: auto;
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+            }
+
+                #module_policies ul.policies li a.policy-link div.policy-info div.policy-type-number span.policy-type {
+                    font-size: 13px;
+                }
+
+                #module_policies ul.policies li a.policy-link div.policy-info div.policy-type-number span.policy-number {
+                    font-size: 11px;
+                }
+
+    #module_policies ul.policies li:last-child a.policy-link {
+        border-radius: 0 0 6px 6px;
+    }
+
+/*---------------------------------
+    Modal Popup
+---------------------------------*/
+
+#insuranceDetailsModal .modal-header .close {
+    margin-top: -18px;
+}
+
+/*#insuranceDetailsModal .modal-body .insuranceDetailModalLabel {
+    font-size: 13px;
+}*/
+
+#insuranceDetailsModal .modal-body .hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#insuranceDetailsModal .modal-footer {
+    border-top: 0 none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*---------------------------------
+    End Modal Popup
+-----------------------------------*/
+
+/*---------------------------------
+   Module Error Div
+---------------------------------*/
+.module_error {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    margin: 10px 0px 12px 0px;
+    position: relative;
+    padding: 10px;
+    font-size: 13px;
+}
+
+/*---------------------------------
+    End Module Error Div
+-----------------------------------*/
+
+/*---------------------------------
+   Horizontal scroll for Div
+---------------------------------*/
+.dashboard-module-h-scroll {
+    padding-right: 6px;
+    overflow-y: scroll;
+    height: 430px;
+}
+
+    .dashboard-module-h-scroll::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px #ffffff;
+        background-color: rgba(0,0,0,0.3);
+    }
+
+    .dashboard-module-h-scroll::-webkit-scrollbar {
+        width: 4px;
+        background-color: rgba(0,0,0,0.3);
+    }
+
+    .dashboard-module-h-scroll::-webkit-scrollbar-thumb {
+        background-color: #a6a6a6;
+        border: 4px solid rgba(0,0,0,0.3);
+    }
+
+/*---------------------------------
+    End Horizontal scroll for Div
+-----------------------------------*/
+
+
+/*---------------------------------
+   Gray Background for Div
+---------------------------------*/
+
+#idForBackgroundGrayed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgb(109,109,109);
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/*---------------------------------
+    End Gray Background
+-----------------------------------*/
+
+/*----------------------------------
+    Button Starts
+------------------------------------*/
+
+#btnMore {
+    width: 94px;
+    height: 45px;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.07;
+    letter-spacing: normal;
+    text-align: center;
+    color: #707070;
+}
+
+#btnClose {
+    width: 94px;
+    height: 45px;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.07;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    background-color: #008000;
+    margin-left: 10px;
+}
+
+/*----------------------------------
+    Button Ends
+------------------------------------*/
