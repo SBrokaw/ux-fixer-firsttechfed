@@ -1,5 +1,181 @@
 ---
-description:
+description: Firefox Extension Development Best Practices and Technical Standards
 globs:
-alwaysApply: false
+  - "manifest.json"
+  - "content-scripts/**/*.js"
+  - "background/**/*.js"
+  - "popup/**/*.js"
+  - "package.json"
+ruleType: Always
 ---
+
+# Firefox Extension Development Best Practices
+
+## Manifest V3 Standards
+
+### Required Permissions
+- Use `activeTab` instead of `tabs` when possible
+- Request only necessary host permissions
+- Avoid broad permissions like `<all_urls>`
+- Use `storage` permission for data persistence
+- Use `notifications` for user alerts
+
+### Content Script Architecture
+- Load content scripts at `document_start` for early DOM access
+- Use `run_at: "document_start"` for critical transformations
+- Implement proper error handling and logging
+- Use MutationObserver for dynamic content
+- Avoid blocking the main thread
+
+### Security Best Practices
+- Never use `eval()` or `innerHTML` with user data
+- Validate all user inputs
+- Use Content Security Policy (CSP)
+- Sanitize data before injection
+- Avoid inline scripts and styles
+
+## Performance Optimization
+
+### Content Script Performance
+- Debounce DOM transformations
+- Use `requestAnimationFrame` for visual changes
+- Minimize DOM queries with caching
+- Batch DOM modifications
+- Use `WeakSet` for tracking transformed elements
+
+### Memory Management
+- Clean up event listeners
+- Disconnect MutationObservers
+- Remove references to DOM elements
+- Use `WeakMap` for element associations
+- Implement proper cleanup in `destroy()` methods
+
+### CSS Injection Strategy
+- Inject CSS early in page load
+- Use CSS custom properties for theming
+- Minimize CSS specificity conflicts
+- Use `!important` sparingly and strategically
+- Implement CSS hot-reloading for development
+
+## Error Handling and Logging
+
+### Console Logging Standards
+```javascript
+// Use consistent logging format
+console.log('[Extension Name]', 'Action', { details });
+console.error('[Extension Name]', 'Error', { error, context });
+console.warn('[Extension Name]', 'Warning', { warning, context });
+```
+
+### Error Recovery
+- Implement graceful degradation
+- Provide fallback behaviors
+- Log errors with context
+- Don't break page functionality
+- Use try-catch blocks strategically
+
+## Testing Strategy
+
+### Unit Testing
+- Test all transformer classes
+- Mock DOM environment properly
+- Test error conditions
+- Verify transformation logic
+- Use Jest with jsdom
+
+### Integration Testing
+- Test on actual target websites
+- Verify CSS transformations
+- Test dynamic content handling
+- Validate accessibility
+- Performance testing
+
+### Manual Testing Checklist
+- [ ] Extension loads without errors
+- [ ] CSS transforms apply correctly
+- [ ] JavaScript transformations work
+- [ ] No broken functionality
+- [ ] Performance impact acceptable
+- [ ] Visual changes match spec
+- [ ] Accessibility maintained
+
+## Development Workflow
+
+### File Organization
+```
+extension/
+├── manifest.json              # Extension manifest
+├── content-scripts/           # Scripts that run on web pages
+│   ├── main.js               # Main orchestrator
+│   ├── transformers/         # Transformation classes
+│   └── utils/                # Utility functions
+├── styles/                   # CSS files
+│   ├── main.css             # Global styles
+│   ├── components.css       # Component styles
+│   └── themes/              # Theme variations
+├── background/              # Background scripts
+├── popup/                   # Extension popup
+└── tests/                   # Test files
+```
+
+### Code Quality Standards
+- Use ES6+ features
+- Implement proper TypeScript types
+- Follow consistent naming conventions
+- Document complex transformations
+- Use meaningful variable names
+
+### Debugging Tools
+- Use Firefox Developer Tools
+- Enable extension debugging
+- Use `about:debugging`
+- Implement debug mode toggle
+- Use source maps for development
+
+## Accessibility Standards
+
+### WCAG Compliance
+- Maintain keyboard navigation
+- Preserve screen reader compatibility
+- Ensure color contrast ratios
+- Provide alternative text
+- Test with accessibility tools
+
+### Focus Management
+- Preserve tab order
+- Maintain focus indicators
+- Handle dynamic content
+- Provide skip links
+- Test with keyboard only
+
+## Distribution and Deployment
+
+### Building Process
+- Use web-ext for building
+- Implement proper versioning
+- Create source maps for debugging
+- Optimize bundle size
+- Validate manifest
+
+### Signing and Publishing
+- Use Firefox Add-ons API
+- Implement automated signing
+- Create proper release notes
+- Test signed extension
+- Monitor user feedback
+
+## Monitoring and Analytics
+
+### Performance Monitoring
+- Track page load impact
+- Monitor memory usage
+- Measure transformation time
+- Log user interactions
+- Monitor error rates
+
+### User Feedback
+- Implement feedback mechanisms
+- Monitor crash reports
+- Track usage patterns
+- Collect user preferences
+- Respond to issues quickly

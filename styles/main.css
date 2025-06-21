@@ -228,3 +228,88 @@ table th, table td, .table th, .table td {
 .modal .close, .popup .close, .dialog .close {
   display: none !important;
 } 
+
+/* Force iris popovers to be visible and inline */
+.iris-popover {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 0.5rem !important;
+  position: static !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+  z-index: auto !important;
+  pointer-events: auto !important;
+}
+
+.iris-popover--collapsed {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Force iris list items to be inline */
+.iris-list-item, .iris-list li {
+  display: inline-block !important;
+  margin-right: 0.5rem !important;
+  float: none !important;
+}
+
+/* Override iris popover positioning */
+.iris-popover[data-placement] {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+}
+
+/* Remove iris popover animations */
+.iris-popover {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Force nav menu popovers to be visible */
+.nav-menu__popover, .popover {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 0.5rem !important;
+  position: static !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Override dropdown toggle behavior */
+.dropdown-toggle[aria-expanded="false"] {
+  pointer-events: none !important;
+}
+
+.dropdown-toggle[aria-expanded="true"] {
+  pointer-events: auto !important;
+}
+
+/* Force all dropdowns to be expanded */
+[aria-expanded="false"] {
+  aria-expanded: true !important;
+}
+
+/* Remove any hover-based hiding */
+*:hover {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Override any CSS that might hide elements */
+[style*="display: none"], [style*="visibility: hidden"], [style*="opacity: 0"] {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+} 

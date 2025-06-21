@@ -1,5 +1,165 @@
 ---
-description:
-globs:
+description: 
+globs: 
 alwaysApply: false
 ---
+# Git Workflow and Commit Standards
+
+## Conventional Commit Convention
+
+### Commit Message Format
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+### Commit Types
+- **feat**: A new feature
+- **fix**: A bug fix
+- **docs**: Documentation only changes
+- **style**: Changes that do not affect the meaning of the code
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **perf**: A code change that improves performance
+- **test**: Adding missing tests or correcting existing tests
+- **chore**: Changes to the build process or auxiliary tools
+
+### Examples
+```
+feat(extension): add dense layout transformation
+fix(forms): resolve dropdown to radio conversion issue
+docs(readme): update installation instructions
+style(css): improve typography spacing
+refactor(js): extract transformer classes
+perf(extension): optimize DOM query performance
+test(unit): add navigation transformer tests
+chore(deps): update web-ext dependency
+```
+
+## Automatic Commit Enforcement
+
+> **Note:** Conventional commit messages are now **automatically enforced** on all pushes and pull requests via [GitHub Actions](mdc:../.github/workflows/conventional-commits.yml). Any commit that does not follow the conventional commit format will cause the CI to fail.
+
+### After Each Change
+1. **Stage Changes**: Automatically stage all modified files
+2. **Analyze Changes**: Review what was changed and why
+3. **Generate Commit Message**: Use conventional commit format
+4. **Commit**: Create commit with descriptive message
+5. **Push**: Push to remote repository if needed
+
+### Change Analysis Process
+- Review the prompts that generated the changes
+- Identify the primary purpose of the changes
+- Determine the appropriate commit type
+- Write a clear, concise description
+- Include scope if applicable
+
+### Commit Message Guidelines
+- Use imperative mood ("add" not "added")
+- Keep description under 50 characters
+- Be specific about what changed
+- Reference related issues or tickets
+- Explain the "why" in the body if needed
+
+## Branch Strategy
+
+### Main Branch
+- `main`: Production-ready code
+- `develop`: Integration branch for features
+- `feature/*`: Feature development branches
+- `hotfix/*`: Critical bug fixes
+- `release/*`: Release preparation branches
+
+### Branch Naming
+```
+feature/ux-transformation
+feature/form-improvements
+hotfix/critical-bug-fix
+release/v1.0.0
+```
+
+## Pre-commit Checks
+
+### Required Checks
+- [ ] All tests pass
+- [ ] Code linting passes
+- [ ] Manifest validation succeeds
+- [ ] No console errors
+- [ ] Extension builds successfully
+
+### Automated Checks
+```bash
+npm test
+npm run lint
+npm run validate:manifest
+npm run build
+```
+
+## Commit History Standards
+
+### Good Commit History
+- Each commit represents a logical change
+- Commits are atomic and focused
+- Commit messages are descriptive
+- History tells a story of development
+- Easy to revert specific changes
+
+### Bad Commit History
+- Commits with multiple unrelated changes
+- Vague commit messages
+- Large commits that are hard to review
+- Commits that break functionality
+- Inconsistent commit message format
+
+## Release Workflow
+
+### Version Management
+- Use semantic versioning (MAJOR.MINOR.PATCH)
+- Update version in `package.json` and `manifest.json`
+- Create git tags for releases
+- Use GitHub releases for distribution
+
+### Release Process
+1. Update version numbers
+2. Create release branch
+3. Final testing and fixes
+4. Create git tag
+5. Push tag to trigger release workflow
+6. Monitor release deployment
+
+## Collaboration Standards
+
+### Pull Request Process
+- Create feature branches for all changes
+- Write descriptive PR descriptions
+- Include testing instructions
+- Request reviews from team members
+- Address review feedback promptly
+
+### Code Review Checklist
+- [ ] Code follows project standards
+- [ ] Tests are included and pass
+- [ ] Documentation is updated
+- [ ] No security vulnerabilities
+- [ ] Performance impact is acceptable
+- [ ] Accessibility is maintained
+
+## Emergency Procedures
+
+### Hotfix Process
+1. Create hotfix branch from main
+2. Make minimal required changes
+3. Test thoroughly
+4. Create PR with emergency label
+5. Expedited review and merge
+6. Deploy immediately
+
+### Rollback Process
+1. Identify the problematic commit
+2. Create rollback branch
+3. Revert the specific changes
+4. Test the rollback
+5. Deploy rollback version
+6. Document the incident

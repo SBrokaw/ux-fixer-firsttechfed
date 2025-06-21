@@ -22,6 +22,33 @@ When managing AI tasks:
 5. The scratchpad MUST be referenced before starting any new subtask
 6. All AI task files MUST be stored in the `tasks/ai/` directory
 
+## CRITICAL: Human Task Organization Rules
+
+**BEFORE creating any new human task, you MUST:**
+
+1. **Check for existing tasks** - Search for similar tasks to avoid duplicates
+2. **Verify directory structure** - Ensure task goes in correct category (validation/clarity/visual)
+3. **Use sequential numbering** - Tasks must be numbered `01-`, `02-`, `03-` etc. in each category
+4. **Update README.md** - Always update `tasks/human/README.md` when adding/removing tasks
+5. **No orphaned tasks** - NEVER create tasks at the root level of `/tasks/human/`
+6. **Merge similar tasks** - If creating a task similar to existing one, merge them instead
+
+**MANDATORY CHECKS BEFORE CREATING TASKS:**
+- [ ] Check `tasks/human/validation/` for existing similar tasks
+- [ ] Check `tasks/human/clarity/` for existing similar tasks  
+- [ ] Check `tasks/human/visual/` for existing similar tasks
+- [ ] Check root level for orphaned tasks that need to be moved
+- [ ] Verify next available number in target category
+- [ ] Plan README.md update
+
+**TASK CREATION WORKFLOW:**
+1. Review existing tasks in all categories
+2. Identify correct category for new task
+3. Determine next sequential number
+4. Create task in correct directory
+5. Update `tasks/human/README.md` immediately
+6. Verify no orphaned tasks remain
+
 ## AI Scratchpad Format
 
 ```markdown
@@ -214,17 +241,23 @@ Critical for establishing demo effectiveness baseline.
 - [ ] Next steps
 ```
 
-❌ Incorrect:
+❌ **INCORRECT - Orphaned Task:**
 ```markdown
-# TODO List
-- Do something
-- Do another thing
-- Done with this
+# Task: Extension Manual Verification
+Priority: High
+Estimated Time: 1-2 hours
+Dependencies: Built extension, Firefox browser
+Status: Not Started
 ```
+**Problem**: Task created at root level instead of in `validation/` directory
+
+❌ **INCORRECT - Duplicate Task:**
+Creating `03-extension-debugging.md` when `03-extension-manual-verification.md` already exists
+**Problem**: Should merge similar tasks instead of creating duplicates
 
 ## File Organization
 
 - AI task files: `tasks/ai/`
-- Human task files: `tasks/human/`
+- Human task files: `tasks/human/` (in appropriate subdirectories)
 - Templates: `tasks/templates/`
 - Scratchpad: `tasks/ai/scratchpad.md`

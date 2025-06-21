@@ -1,6 +1,103 @@
 # ux-fixer-firsttechfed
 
+> **⚠️ PROJECT ABANDONED**  
+> This project was abandoned due to technical limitations. The FirstTechFed website uses a modern Single Page Application (SPA) with strict Content Security Policy (CSP) and complex JavaScript frameworks that make reliable UI transformation impossible from a browser extension. See [Technical Limitations](#technical-limitations) below for details.
+
 A Firefox extension that transforms FirstTechFed's banking interface into a dense, efficient, text-based design inspired by excellent CLI interfaces. This extension eliminates dropdown menus, hamburger menus, and hidden functionality while maximizing information density and preserving all existing functionality.
+
+## Project Status: ABANDONED ❌
+
+**Reason for Abandonment**: The FirstTechFed website proved to be technically unsuitable for browser extension-based UI transformation due to:
+
+1. **Modern SPA Architecture**: Uses Alkami's Iris framework with dynamic content loading
+2. **Content Security Policy**: Strict CSP blocks or reverts extension modifications
+3. **Complex Event Handling**: `data-close-on-leave` and other framework behaviors fight against transformations
+4. **Framework Interference**: Site's JavaScript immediately reverts any changes made by the extension
+5. **Dynamic Navigation**: Navigation elements load after page load with complex state management
+
+**Manual Testing Results**: 
+- Extension loads and runs without errors
+- Console shows successful element detection and transformation attempts
+- However, all changes are immediately reverted by the site's framework
+- Dropdown menus actually become worse (gaps, disappearing behavior)
+- No reliable UI transformation is possible
+
+**Lessons Learned**: 
+- Modern banking sites with heavy SPA frameworks are poor candidates for extension-based UI transformation
+- CSP and framework interference make reliable modification impossible without site owner cooperation
+- Simpler, more static websites would be much better candidates for this type of project
+
+## Technical Limitations
+
+### Why This Project Failed
+
+The FirstTechFed site uses several technologies that make browser extension transformation impossible:
+
+1. **Alkami Iris Framework**: A complex banking platform that uses:
+   - `iris-popover` components with `data-close-on-leave` behavior
+   - Dynamic navigation with `data-primarynavigationinitcomplete` state
+   - Event-driven architecture that fights against external modifications
+
+2. **Content Security Policy (CSP)**: The site likely has strict CSP that:
+   - Blocks inline style modifications
+   - Prevents script injection
+   - Reverts DOM changes made by extensions
+
+3. **Single Page Application (SPA)**: The site loads content dynamically:
+   - Navigation elements appear after initial page load
+   - Complex state management prevents reliable targeting
+   - Framework continuously re-renders and reverts changes
+
+4. **Framework Interference**: The site's JavaScript:
+   - Immediately detects and reverts any DOM modifications
+   - Uses complex event handling that conflicts with extension code
+   - Maintains strict control over UI state
+
+### What Was Attempted
+
+The extension included several advanced techniques to overcome these limitations:
+
+- **Continuous Retransformation**: Checks every 2 seconds for 30 seconds for new content
+- **Framework-Specific Selectors**: Targets `iris-popover`, `nav-menu__popover`, etc.
+- **Aggressive CSS Overrides**: Uses `!important` declarations to override framework styles
+- **Attribute Removal**: Removes `data-close-on-leave` and other problematic attributes
+- **SPA Detection**: Monitors for navigation completion indicators
+
+Despite these efforts, the site's framework consistently reverted all changes, making reliable transformation impossible.
+
+## Alternative Website Suggestions
+
+For future projects of this type, consider these websites that would be much better candidates:
+
+### News/Aggregation Sites (Similar to Pinboard.in/popular)
+- **Reddit** - Static content, simple structure, good candidate for dense UI
+- **Hacker News** - Already text-focused, could be made even more dense
+- **Lobste.rs** - Similar to HN, good structure for transformation
+- **Slashdot** - Classic news site with simple layout
+- **Digg** - News aggregation with straightforward structure
+
+### Documentation/Reference Sites
+- **Wikipedia** - Excellent candidate for dense, text-focused transformation
+- **Stack Overflow** - Could benefit from more compact layout
+- **GitHub** - Repository pages could be made more dense
+- **MDN Web Docs** - Documentation site with good structure
+
+### Shopping/E-commerce (Simpler than Banking)
+- **Amazon** - Complex but more static than banking sites
+- **eBay** - Good candidate for dense product listings
+- **Newegg** - Tech-focused, could benefit from CLI-style interface
+
+### Social Media (Simpler Platforms)
+- **Twitter** - Could be transformed into a more text-focused interface
+- **Mastodon** - Open source, simpler than commercial platforms
+- **Discourse forums** - Good structure for dense transformation
+
+### Key Criteria for Good Candidates
+1. **Static or Simple SPA** - Avoid complex frameworks like React/Vue with heavy state management
+2. **No Strict CSP** - Sites that don't aggressively block modifications
+3. **Simple DOM Structure** - Avoid sites with complex component hierarchies
+4. **Text-Heavy Content** - Sites where information density would be valuable
+5. **No Critical Security** - Avoid banking, healthcare, or other security-critical sites
 
 ## Features
 

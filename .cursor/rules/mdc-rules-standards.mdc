@@ -1,4 +1,11 @@
 ---
+description: MDC Rules Standards and Best Practices
+globs:
+  - ".cursor/rules/**/*.mdc"
+  - "**/*.mdc"
+ruleType: Always
+---
+---
 description: Cursor Rules Location
 globs: *.mdc
 alwaysApply: false

@@ -1,0 +1,13 @@
+---
+description: CSS Styling Standards and Best Practices for Firefox Extension
+globs:
+  - "styles/**/*.css"
+  - "content-scripts/**/*.js"
+  - "manifest.json"
+ruleType: Auto Attached
+---
+---
+description:
+globs:
+alwaysApply: false
+---

@@ -1,0 +1,14 @@
+---
+description: Documentation Standards and Best Practices for Project Documentation
+globs:
+  - "specs/**/*.md"
+  - "README.md"
+  - "SPECS.md"
+  - "**/*.md"
+ruleType: Auto Attached
+---
+---
+description:
+globs:
+alwaysApply: false
+---

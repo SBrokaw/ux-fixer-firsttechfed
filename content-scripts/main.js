@@ -3,6 +3,36 @@
  * Entry point for the extension that orchestrates all transformations
  */
 
+// IMMEDIATE VISUAL INDICATOR THAT EXTENSION IS LOADING
+console.log('🚀 FirstTechFed UX Fixer: EXTENSION LOADED AND RUNNING!');
+console.log('🔍 Current URL:', window.location.href);
+console.log('📅 Timestamp:', new Date().toISOString());
+
+// Add a visible indicator to the page
+const indicator = document.createElement('div');
+indicator.style.cssText = `
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 12px;
+  z-index: 999999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+`;
+indicator.textContent = 'UX Fixer Active';
+document.body.appendChild(indicator);
+
+// Remove indicator after 5 seconds
+setTimeout(() => {
+  if (indicator.parentNode) {
+    indicator.parentNode.removeChild(indicator);
+  }
+}, 5000);
+
 class FirstTechFedUXFixer {
   constructor() {
     this.initialized = false;
@@ -11,8 +41,12 @@ class FirstTechFedUXFixer {
     this.config = {
       debug: true,
       retransformDelay: 100,
-      maxRetransformAttempts: 3
+      maxRetransformAttempts: 10, // Increased for SPA
+      retransformInterval: 2000, // Check every 2 seconds for new content
+      maxRetransformTime: 30000 // Try for 30 seconds total
     };
+    this.retransformCount = 0;
+    this.startTime = Date.now();
   }
 
   /**
@@ -58,6 +92,9 @@ class FirstTechFedUXFixer {
       // Set up event listeners
       this.setupEventListeners();
       
+      // Set up continuous retransformation for SPA
+      this.setupContinuousRetransform();
+      
       this.log('FirstTechFed UX Fixer initialized successfully');
     } catch (error) {
       this.logError('Failed to initialize extension', error);
@@ -65,17 +102,60 @@ class FirstTechFedUXFixer {
   }
 
   /**
+   * Set up continuous retransformation for SPA content loading
+   */
+  setupContinuousRetransform() {
+    const interval = setInterval(() => {
+      const elapsed = Date.now() - this.startTime;
+      
+      // Stop if we've been trying too long
+      if (elapsed > this.config.maxRetransformTime) {
+        this.log('Stopping continuous retransform - timeout reached');
+        clearInterval(interval);
+        return;
+      }
+      
+      // Check if navigation is complete
+      const navComplete = document.querySelector('[data-primarynavigationinitcomplete="true"]');
+      const irisPopovers = document.querySelectorAll('.iris-popover');
+      const navMenu = document.querySelector('#nav_menu');
+      
+      if (navComplete || irisPopovers.length > 0 || navMenu) {
+        this.log('Navigation elements detected, applying transformations...');
+        this.applyTransformations();
+        this.retransformCount++;
+        
+        // Stop if we've applied enough times
+        if (this.retransformCount >= this.config.maxRetransformAttempts) {
+          this.log('Stopping continuous retransform - max attempts reached');
+          clearInterval(interval);
+        }
+      }
+    }, this.config.retransformInterval);
+  }
+
+  /**
    * Apply all transformations
    */
   applyTransformations() {
+    console.log('🔄 Starting transformations...');
+    console.log('📊 Document ready state:', document.readyState);
+    console.log('🏗️ Body exists:', !!document.body);
+    console.log('🔍 Total elements:', document.querySelectorAll('*').length);
+    
     this.transformers.forEach(transformer => {
       try {
         this.log(`Applying ${transformer.constructor.name}...`);
+        const beforeCount = document.querySelectorAll('*').length;
         transformer.transform();
+        const afterCount = document.querySelectorAll('*').length;
+        console.log(`✅ ${transformer.constructor.name} completed. Elements: ${beforeCount} → ${afterCount}`);
       } catch (error) {
         this.logError(`Transformation error in ${transformer.constructor.name}`, error);
       }
     });
+    
+    console.log('🎉 All transformations completed!');
   }
 
   /**
@@ -318,17 +398,21 @@ class NavigationTransformer {
   }
 
   transform() {
+    console.log('🧭 NavigationTransformer starting...');
     this.transformNavigation();
     this.removeHamburgerMenus();
     this.transformDropdownMenus();
     this.expandMobileMenus();
+    console.log('🧭 NavigationTransformer completed');
   }
 
   transformNavigation() {
     const navElements = document.querySelectorAll('nav, .nav, .navigation, .navbar, header');
-    navElements.forEach(nav => {
+    console.log('🧭 Found navigation elements:', navElements.length);
+    navElements.forEach((nav, index) => {
       if (this.transformedElements.has(nav)) return;
       
+      console.log(`🧭 Transforming nav ${index + 1}:`, nav.tagName, nav.className);
       nav.classList.add('ux-fixer-nav');
       this.transformedElements.add(nav);
     });
@@ -336,9 +420,11 @@ class NavigationTransformer {
 
   removeHamburgerMenus() {
     const hamburgerMenus = document.querySelectorAll('.hamburger, .menu-toggle, .mobile-menu-toggle, .navbar-toggler');
-    hamburgerMenus.forEach(menu => {
+    console.log('🧭 Found hamburger menus:', hamburgerMenus.length);
+    hamburgerMenus.forEach((menu, index) => {
       if (this.transformedElements.has(menu)) return;
       
+      console.log(`🧭 Expanding hamburger menu ${index + 1}:`, menu.tagName, menu.className);
       this.expandHamburgerMenu(menu);
       this.transformedElements.add(menu);
     });
@@ -347,6 +433,7 @@ class NavigationTransformer {
   expandHamburgerMenu(menuElement) {
     // Find the hidden menu content
     const menuContent = menuElement.querySelector('.menu-content, .nav-content, .navbar-collapse, ul, .nav-menu');
+    console.log('🧭 Hamburger menu content found:', !!menuContent);
     if (menuContent) {
       // Make it visible and inline
       menuContent.style.display = 'flex';
@@ -360,16 +447,31 @@ class NavigationTransformer {
       
       // Remove the hamburger trigger
       menuElement.remove();
+      console.log('🧭 Hamburger menu expanded and removed');
     }
   }
 
   transformDropdownMenus() {
-    const dropdownMenus = document.querySelectorAll('.dropdown-menu, .dropdown-content, .submenu');
-    dropdownMenus.forEach(dropdown => {
+    // FirstTechFed specific selectors
+    const dropdownMenus = document.querySelectorAll('.dropdown-menu, .dropdown-content, .submenu, .iris-popover, .nav-menu__popover, .popover');
+    console.log('🧭 Found dropdown menus:', dropdownMenus.length);
+    dropdownMenus.forEach((dropdown, index) => {
       if (this.transformedElements.has(dropdown)) return;
       
+      console.log(`🧭 Converting dropdown ${index + 1} to inline:`, dropdown.tagName, dropdown.className);
       this.convertDropdownToInline(dropdown);
       this.transformedElements.add(dropdown);
+    });
+    
+    // Handle FirstTechFed specific iris-popover components
+    const irisPopovers = document.querySelectorAll('.iris-popover');
+    console.log('🧭 Found iris popovers:', irisPopovers.length);
+    irisPopovers.forEach((popover, index) => {
+      if (this.transformedElements.has(popover)) return;
+      
+      console.log(`🧭 Converting iris popover ${index + 1} to inline:`, popover.tagName, popover.className);
+      this.convertIrisPopoverToInline(popover);
+      this.transformedElements.add(popover);
     });
   }
 
@@ -385,6 +487,39 @@ class NavigationTransformer {
     dropdownElement.style.boxShadow = 'none';
     dropdownElement.style.border = 'none';
     dropdownElement.style.background = 'transparent';
+    
+    // Remove any close-on-leave behavior
+    dropdownElement.removeAttribute('data-close-on-leave');
+    dropdownElement.removeAttribute('data-close-on-escape');
+  }
+
+  convertIrisPopoverToInline(popoverElement) {
+    // Remove iris popover behavior
+    popoverElement.classList.remove('iris-popover--collapsed');
+    popoverElement.style.display = 'flex';
+    popoverElement.style.flexDirection = 'row';
+    popoverElement.style.gap = '0.5rem';
+    popoverElement.style.position = 'static';
+    popoverElement.style.opacity = '1';
+    popoverElement.style.visibility = 'visible';
+    popoverElement.style.transform = 'none';
+    popoverElement.style.boxShadow = 'none';
+    popoverElement.style.border = 'none';
+    popoverElement.style.background = 'transparent';
+    popoverElement.style.zIndex = 'auto';
+    
+    // Remove iris-specific attributes
+    popoverElement.removeAttribute('data-close-on-leave');
+    popoverElement.removeAttribute('data-close-on-escape');
+    popoverElement.removeAttribute('data-focus-target');
+    popoverElement.removeAttribute('data-return-focus');
+    
+    // Make all list items inline
+    const listItems = popoverElement.querySelectorAll('li, .iris-list-item');
+    listItems.forEach(item => {
+      item.style.display = 'inline-block';
+      item.style.marginRight = '0.5rem';
+    });
   }
 
   expandMobileMenus() {

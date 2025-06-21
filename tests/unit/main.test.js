@@ -32,7 +32,7 @@ global.console = {
 };
 
 // Import the main script
-require('../content-scripts/main.js');
+require('../../content-scripts/main.js');
 
 describe('FirstTechFed UX Fixer', () => {
   beforeEach(() => {

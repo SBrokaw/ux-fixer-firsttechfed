@@ -1,0 +1,24 @@
+name: Conventional Commits Enforcement
+
+on:
+  push:
+    branches: [main, develop, feature/**, hotfix/**, release/**]
+  pull_request:
+    branches: [main, develop, feature/**, hotfix/**, release/**]
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install commitlint
+        run: npm install --save-dev @commitlint/config-conventional @commitlint/cli
+      - name: Create commitlint config
+        run: |
+          echo "module.exports = {extends: ['@commitlint/config-conventional']};" > commitlint.config.js
+      - name: Lint commits
+        run: npx commitlint --from=$(git rev-list --max-parents=0 HEAD) --to=HEAD 

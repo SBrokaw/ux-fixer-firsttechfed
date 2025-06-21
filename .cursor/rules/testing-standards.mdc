@@ -1,0 +1,14 @@
+---
+description: Testing Standards and Best Practices for Firefox Extension Development
+globs:
+  - "tests/**/*.js"
+  - "tests/**/*.json"
+  - "jest.config.js"
+  - "package.json"
+ruleType: Auto Attached
+---
+---
+description:
+globs:
+alwaysApply: false
+---

@@ -13,6 +13,12 @@
    - Time: 1-2 hours
    - Dependencies: Transfer page access
 
+3. **Extension Testing and Debugging** - `validation/03-extension-debugging.md`
+   - Status: Not Started
+   - Time: 1-2 hours
+   - Dependencies: Firefox, extension loaded, access to firsttechfed.com
+   - **CRITICAL**: Tests the updated extension with SPA handling improvements
+
 ### 🟡 MEDIUM PRIORITY - Clarity Tasks
 1. **Performance Impact Measurement** - `clarity/01-performance-measurement.md`
    - Status: Not Started
@@ -87,7 +93,8 @@
 
 ## Next Steps
 
-1. **Immediate**: Complete Dashboard Baseline Testing
-2. **Tonight**: Transfer Page Form Analysis
-3. **Tomorrow**: Performance and Accessibility validation
-4. **Ongoing**: Visual documentation as changes are made 
+1. **Immediate**: Complete Extension Testing and Debugging (CRITICAL)
+2. **Tonight**: Dashboard Baseline Testing
+3. **Tomorrow**: Transfer Page Form Analysis
+4. **Ongoing**: Performance and Accessibility validation
+5. **Ongoing**: Visual documentation as changes are made 

@@ -4,7 +4,8 @@
   "description": "Firefox extension to transform FirstTechFed's interface into a dense, efficient, text-based design",
   "main": "content-scripts/main.js",
   "scripts": {
-    "build": "web-ext build",
+    "build": "web-ext build --overwrite-dest",
+    "build:clean": "rm -rf web-ext-artifacts/ && web-ext build",
     "run": "web-ext run",
     "lint": "web-ext lint",
     "test": "jest",
@@ -12,6 +13,8 @@
     "test:integration": "jest --testPathPattern=integration",
     "test:a11y": "jest --testPathPattern=accessibility",
     "validate:manifest": "web-ext lint --warnings-as-errors",
+    "validate:mdc": "./scripts/validate-mdc-rules.sh",
+    "validate:all": "npm run validate:manifest && npm run validate:mdc",
     "dev": "web-ext run --firefox=firefox-developer-edition",
     "package": "web-ext build --overwrite-dest",
     "sign": "web-ext sign --api-key=$FIREFOX_ADDONS_API_KEY --api-secret=$FIREFOX_ADDONS_API_SECRET"
